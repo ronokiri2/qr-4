@@ -1,0 +1,96 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #222222;
+}
+
+.buttons {
+  margin: 0 auto;
+}
+
+.button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 20vw;
+  height: 10vw;
+  border-radius: 2vw;
+  background-color: white;
+  text-align: center;
+}
+
+.app {
+  padding: 10px;
+}
+
+.box {
+  margin: 10px 10px 0 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: green;
+  font-weight: 600;
+  color: white;
+  background-image: url("./Penguins0.webp");
+}
+
+.box.exiting,
+.box.exited {
+  display: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+button {
+  margin: 1rem 0.5rem;
+}
+
+.display-none {
+  display: none;
+}
+
+.qr {
+  background-color: darkgrey;
+}

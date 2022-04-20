@@ -1,0 +1,65 @@
+html {
+	font-family: system-ui, sans-serif;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(34, 34, 34);
+}
+.buttons {
+	margin: 0 auto;
+}
+.button {
+	user-select: none;
+	width: 20vw;
+	height: 10vw;
+	border-radius: 2vw;
+	background-color: white;
+	text-align: center;
+
+  }
+  
+  .app {
+	padding: 10px;
+  }
+  
+  .box {
+	margin: 10px 10px 0 0;
+	user-select: none;
+	width: 150px;
+	height: 150px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: green;
+	font-weight: 600;
+	color: white;
+	background-image: url('./Penguins0.webp');
+  }
+  
+  .box.exiting,
+  .box.exited {
+	display: none;
+  }
+  
+  .container {  
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  }
+  
+  button {
+	margin: 1rem 0.5rem;
+  }
+.display-none {
+	display: none;
+}
+.qr {
+	background-color: darkgrey;
+}
