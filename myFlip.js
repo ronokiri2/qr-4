@@ -16,12 +16,35 @@ let wrapColor = gsap.utils.wrap(["blue", "red", "purple", "orange"]);
 let count = 0;
 let state;
 
+let input = prompt("Введите номер салона сотовой связи")
+
+console.log(input);
+// const form = document.querySelector(".form");
+// const input = document.querySelector(".input");
+// const enterButton = document.querySelector("#enter-button");
+// const idontknowButton = document.querySelector("#idontknow-button");
+
+// enterButton.addEventListener("click", () => {
+// 	if (input.value !== "" || input.value !== " " || input.value !== null || input.value !== required) {
+// 		setState(() => form.classList.add("exiting"));
+// 		setState(() => form.classList.add("js")); 
+// 	}
+// });
+
+// idontknowButton.addEventListener("click", () => {
+// 	if (input.value !== "" || input.value !== " " || input.value !== null || input.value !== required) {
+// 		setState(() => form.classList.add("exiting"));
+// 		setState(() => form.classList.add("js")); 
+// 	}
+// });
+
+
 // настройки QR кода
 const qrCode = new QRCodeStyling({
 	width: 150,
 	height: 150,
 	type: "svg",
-	data: "https://kion.ru/test?utm_source=SALON&utm_medium=SALON-",
+	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
 	image: "./kion.svg",
 	imageSize: "1",
 	dotsOptions: {
@@ -38,8 +61,8 @@ const qrCode = new QRCodeStyling({
 });
 
 
-// можно дать листенер только на один клик
-// а после клика на кнопку назад - добавить листенер
+
+
 
 
 // При клике на первую карточку
@@ -52,9 +75,7 @@ function onClickFirstCard() {
 		setState(() => container.append(createQr()));
 		setState(() => container.append(createInstruction()));
 		setState(() => body.append(createReturnButtonToMainMenu1()));
-	} 
-
-	
+	}
 }
 
 function onClickSecondCard() {
@@ -79,6 +100,7 @@ function createFirstCard() {
 	FirstCard.addEventListener("click", onClickFirstCard);
 	return FirstCard;  
 }
+
 function createSecondCard() {
 	let SecondCard = document.createElement("img");
 	SecondCard.classList.add("box");
