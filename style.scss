@@ -22,10 +22,7 @@ body {
 	text-align: center;
 
   }
-  
-  .app {
-	padding: 10px;
-  }
+
   
   .box {
 	margin: 10px 10px 0 0;
@@ -37,14 +34,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: green;
+	background-color: rgb(163, 21, 130);
 	font-weight: 600;
 	color: white;
 	background-image: url('./Penguins0.webp');
   }
   
-  .box.exiting,
-  .box.exited {
+  .exiting,
+  .exited {
 	display: none;
   }
   

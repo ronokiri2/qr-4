@@ -37,10 +37,6 @@ body {
   text-align: center;
 }
 
-.app {
-  padding: 10px;
-}
-
 .box {
   margin: 10px 10px 0 0;
   -webkit-user-select: none;
@@ -60,14 +56,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: green;
+  background-color: #a31582;
   font-weight: 600;
   color: white;
   background-image: url("./Penguins0.webp");
 }
 
-.box.exiting,
-.box.exited {
+.exiting,
+.exited {
   display: none;
 }
 

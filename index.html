@@ -2,6 +2,8 @@
 <html lang="en">
 	<link rel="stylesheet" href="./reset.css">
 	<link rel="stylesheet" href="./style.css">
+	<link rel="prefetch" href="./kion.svg">
+	<link rel="prefetch" href="./kion2.svg">
 	<script defer src="./gsap.min.js"></script>
 	<script defer src="./Flip.min.js"></script>
 	<script defer src="./qr.min.js"></script>
@@ -13,15 +15,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body id="app">
-		  <div class="buttons">
-			<button id="add-button" class="button">Add Box</button>
-			<button id="shuffle-button" class="button">Shuffle</button>
-			<button id="add-qr" class="button">QR</button>
-		  </div>
-		  <div class="container">
-			  <img src="./kion.svg" class="box">
-			  <img src="./kion.svg" class="box img">
-		  </div>
+
+<body>
+	<div class="buttons">
+		<button id="add-button" class="button">Add Box</button>
+		<button id="shuffle-button" class="button">Shuffle</button>
+		<button id="add-qr" class="button">QR</button>
+	</div>
+	<div class="container">
+		<img src="./kion.svg" class="box first-card">
+		<img src="./kion2.svg" class="box second-card">
+	</div>
 </body>
 </html>
