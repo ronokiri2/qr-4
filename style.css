@@ -19,47 +19,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #222222;
-  /* position: relative; */
 }
 
-form {
-  position: absolute;
-  z-index: 5;
-  width: 30vw;
-  height: 12vw;
-  background-color: white;
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-form input {
-  border: 1px solid black;
-  width: 16vw;
-  height: 2vw;
-  margin-top: 2vw;
-}
-form .form__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5vw;
-  margin-top: 2vw;
-}
-form button {
-  background-color: lightgray;
-  width: 10vw;
-  height: 2vw;
-  text-align: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 80vw;
+  height: 30vw;
+  margin: 0 auto;
 }
 
 .button {
@@ -111,18 +88,6 @@ form button {
 .exiting,
 .exited {
   display: none;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .display-none {
