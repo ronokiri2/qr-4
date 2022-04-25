@@ -37,8 +37,17 @@ body {
   text-align: center;
 }
 
+#shuffle-button {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 2vw;
+  background-color: #282828;
+  text-align: center;
+  color: black;
+}
+
 .box {
-  margin: 10px 10px 0 0;
+  margin: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -77,10 +86,6 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-button {
-  margin: 1rem 0.5rem;
 }
 
 .display-none {

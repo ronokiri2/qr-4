@@ -20,12 +20,18 @@ body {
 	border-radius: 2vw;
 	background-color: white;
 	text-align: center;
-
-  }
-
+}
+#shuffle-button {
+	width: 2vw;
+	height: 2vw;
+	border-radius: 2vw;
+	background-color: rgb(40, 40, 40);
+	text-align: center;
+	color: black;
+}
   
   .box {
-	margin: 10px 10px 0 0;
+	margin: 10px;
 	user-select: none;
 	width: 150px;
 	height: 150px;
@@ -50,10 +56,7 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
   }
-  
-  button {
-	margin: 1rem 0.5rem;
-  }
+
 .display-none {
 	display: none;
 }

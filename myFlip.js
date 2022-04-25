@@ -38,28 +38,36 @@ const qrCode = new QRCodeStyling({
 });
 
 
-function createBox() {
-	let box = document.createElement("div");
-	box.style.backgroundColor = wrapColor(++count);
-
-	//   box.style.backgroundImage = "url('./Penguins0.webp')";
-	box.classList.add("box");
-	box.textContent = "Click Me";
-	
-	function onClick() {
-		box.removeEventListener("click", onClick);
-		setState(() => box.classList.add("exiting"));
-	}
-	
-	box.addEventListener("click", onClick);
-	
-	return box;  
-}
 // можно дать листенер только на один клик
 // а после клика на кнопку назад - добавить листенер
 
 
+// При клике на первую карточку
+function onClickFirstCard() {
+	SecondCard = document.querySelector(".second-card");
+	if (SecondCard != null) {
+		setState(() => SecondCard.classList.add("exiting"));
+		setState(() => SecondCard.classList.add("js"));
+		setState(() => container.append(createDescription()));
+		setState(() => container.append(createQr()));
+		setState(() => container.append(createInstruction()));
+		setState(() => body.append(createReturnButtonToMainMenu1()));
+	} 
 
+	
+}
+
+function onClickSecondCard() {
+	FirstCard = document.querySelector(".first-card");
+	if (FirstCard != null) {
+		setState(() => FirstCard.classList.add("exiting"));
+		setState(() => FirstCard.classList.add("js"));
+		setState(() => container.append(createDescription2()));
+		setState(() => container.append(createQr()));
+		setState(() => container.append(createInstruction()));
+		setState(() => body.append(createReturnButtonToMainMenu2()));
+	}
+}
 
 function createFirstCard() {
 	let FirstCard = document.createElement("img");
@@ -68,23 +76,7 @@ function createFirstCard() {
 	FirstCard.classList.add("first-card");
 	FirstCard.src = "./kion.svg";
 	
-	// function onClick() {
-	// 	FirstCard.removeEventListener("click", onClick);
-	// 	setState(() => FirstCard.classList.add("exiting"));
-	// }
-	
-	// FirstCard.addEventListener("click", onClick);
-	FirstCard.addEventListener("click", () => {
-		SecondCard = document.querySelector(".second-card");
-		if (SecondCard != null) {
-			setState(() => SecondCard.classList.add("exiting"));
-			setState(() => SecondCard.classList.add("js"));
-		}
-		setState(() => container.append(createDescription()));
-		setState(() => container.append(createQr()));
-		setState(() => container.append(createInstruction()));
-		setState(() => body.append(createReturnButtonToMainMenu1()));
-	}, { once: true });
+	FirstCard.addEventListener("click", onClickFirstCard);
 	return FirstCard;  
 }
 function createSecondCard() {
@@ -93,18 +85,8 @@ function createSecondCard() {
 	SecondCard.classList.add("second-card");
 	SecondCard.classList.add("js");
 	SecondCard.src = "./kion2.svg";
-	
-	SecondCard.addEventListener("click", () => {
-		FirstCard = document.querySelector(".first-card");
-		if (FirstCard != null) {
-			setState(() => FirstCard.classList.add("exiting"));
-			setState(() => FirstCard.classList.add("js"));
-		}
-		setState(() => container.append(createDescription2()));
-		setState(() => container.append(createQr()));
-		setState(() => container.append(createInstruction()));
-		setState(() => body.append(createReturnButtonToMainMenu2()));
-	}, { once: true });
+
+	SecondCard.addEventListener("click", onClickSecondCard);
 	return SecondCard;  
 }
 
@@ -113,7 +95,7 @@ function createDescription() {
 	description.classList.add("box");
 	description.classList.add("description");
 	description.classList.add("js");
-	description.textContent = "Description";
+	description.textContent = "Описание первой карточки";
 
 	return description;
 }
@@ -123,7 +105,7 @@ function createDescription2() {
 	description2.classList.add("box");
 	description2.classList.add("description2");
 	description2.classList.add("js");
-	description2.textContent = "Description for second card";
+	description2.textContent = "Описание второй карточки";
 
 	return description2;
 }
@@ -136,14 +118,6 @@ function createQr() {
 
 	// добавить qr code
 	qrCode.append(qr);
-	
-	// добавить функцию по клику
-	function onClick() {
-		qr.removeEventListener("click", onClick);
-		setState(() => qr.classList.add("exiting"));
-	}
-	qr.addEventListener("click", onClick);
-
 	return qr;
 }
 
@@ -152,7 +126,7 @@ function createInstruction() {
 	instruction.classList.add("box");
 	instruction.classList.add("instruction");
 	instruction.classList.add("js");
-	instruction.textContent = "instruction";
+	instruction.textContent = "Инструкция";
 
 	return instruction;
 }
@@ -163,10 +137,10 @@ function createReturnButtonToMainMenu1() {
 	ReturnButtonToMainMenu1.classList.add("button");
 	ReturnButtonToMainMenu1.classList.add("return-button");
 	ReturnButtonToMainMenu1.classList.add("js");
-	ReturnButtonToMainMenu1.textContent = "button";
+	ReturnButtonToMainMenu1.textContent = "Назад";
 
 	// По клику на кнопку НАЗАД удалятся элементы и добавится вторая карточка
-	function onClick() {
+	function onClick1() {
 		let instruction = document.querySelector(".instruction");
 		let description = document.querySelector(".description");
 		let qr = document.querySelector(".qr");
@@ -177,17 +151,10 @@ function createReturnButtonToMainMenu1() {
 		
 		setState(() => container.append(createSecondCard()));
 
-		// Если опять кликнуть на карточку
-		FirstCard.addEventListener("click", () => {
-			SecondCard = document.querySelector(".second-card");
-			setState(() => SecondCard.classList.add("exiting"));
-			setState(() => container.append(createDescription()));
-			setState(() => container.append(createQr()));
-			setState(() => container.append(createInstruction()));
-			setState(() => body.append(createReturnButtonToMainMenu1()));
-		}, { once: true });
+		FirstCard = document.querySelector(".first-card");
+		FirstCard.addEventListener("click", onClickFirstCard);
 	}
-	ReturnButtonToMainMenu1.addEventListener("click", onClick);
+	ReturnButtonToMainMenu1.addEventListener("click", onClick1);
 
 	return ReturnButtonToMainMenu1;
 }
@@ -201,10 +168,10 @@ function createReturnButtonToMainMenu2() {
 	ReturnButtonToMainMenu2.classList.add("button");
 	ReturnButtonToMainMenu2.classList.add("return-button");
 	ReturnButtonToMainMenu2.classList.add("js");
-	ReturnButtonToMainMenu2.textContent = "button";
+	ReturnButtonToMainMenu2.textContent = "Назад";
 
-	// По клику на кнопку удалятся элементы и добавится вторая карточка
-	function onClick() {
+	// По клику на кнопку НАЗАД удалятся элементы и добавится первая карточка
+	function onClick2() {
 		let instruction = document.querySelector(".instruction");
 		let description2 = document.querySelector(".description2");
 		let qr = document.querySelector(".qr");
@@ -215,26 +182,16 @@ function createReturnButtonToMainMenu2() {
 
 		setState(() => container.prepend(createFirstCard()));
 
-		// Если опять кликнуть на карточку
-		SecondCard.addEventListener("click", () => {
-			FirstCard = document.querySelector(".first-card");
-			setState(() => FirstCard.classList.add("exiting"));
-			setState(() => container.append(createDescription2()));
-			setState(() => container.append(createQr()));
-			setState(() => container.append(createInstruction()));
-			setState(() => body.append(createReturnButtonToMainMenu2()));
-		}, { once: true });
+		SecondCard = document.querySelector(".second-card");
+		SecondCard.addEventListener("click", onClickSecondCard);
 	}
-	ReturnButtonToMainMenu2.addEventListener("click", onClick);
+	ReturnButtonToMainMenu2.addEventListener("click", onClick2);
 
 	return ReturnButtonToMainMenu2;
 }
 
 
 
-addButton.addEventListener("click", () => {
-	setState(() => container.prepend(createBox()));
-});
 
 shuffleButton.addEventListener("click", () => {
 	setState(() => gsap.utils.shuffle(gsap.utils.toArray(".box")).forEach(box => container.append(box)));  
