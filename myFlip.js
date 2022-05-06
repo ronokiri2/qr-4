@@ -4,10 +4,8 @@ gsap.config({ trialWarn: false });
 
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
-let addButton = document.querySelector("#add-button");
-let shuffleButton = document.querySelector("#shuffle-button");
-let addQRButton = document.querySelector("#add-qr");
-
+const containerLeft = document.querySelector(".container__left");
+const containerRight = document.querySelector(".container__right");
 
 let FirstCard = document.querySelector(".first-card");
 let SecondCard = document.querySelector(".second-card");
@@ -16,8 +14,8 @@ let wrapColor = gsap.utils.wrap(["blue", "red", "purple", "orange"]);
 let count = 0;
 let state;
 
-let input = prompt("Введите номер салона сотовой связи")
-
+// let input = prompt("Введите номер салона сотовой связи")
+let input = '6';
 console.log(input);
 // const form = document.querySelector(".form");
 // const input = document.querySelector(".input");
@@ -52,7 +50,7 @@ const qrCode = new QRCodeStyling({
 		type: "rounded"
 	},
 	backgroundOptions: {
-		color: "white",
+		color: "red",
 	},
 	imageOptions: {
 		crossOrigin: "anonymous",
@@ -68,12 +66,14 @@ const qrCode = new QRCodeStyling({
 // При клике на первую карточку
 function onClickFirstCard() {
 	SecondCard = document.querySelector(".second-card");
+	FirstCard = document.querySelector(".first-card");
 	if (SecondCard != null) {
 		setState(() => SecondCard.classList.add("exiting"));
+		setState(() => FirstCard.classList.add("active"));
 		setState(() => SecondCard.classList.add("js"));
-		setState(() => container.append(createDescription()));
-		setState(() => container.append(createQr()));
-		setState(() => container.append(createInstruction()));
+		// setState(() => containerRight.append(createDescription()));
+		setState(() => containerRight.append(createQr()));
+		// setState(() => containerRight.append(createInstruction()));
 		setState(() => body.append(createReturnButtonToMainMenu1()));
 	}
 }
@@ -83,20 +83,31 @@ function onClickSecondCard() {
 	if (FirstCard != null) {
 		setState(() => FirstCard.classList.add("exiting"));
 		setState(() => FirstCard.classList.add("js"));
-		setState(() => container.append(createDescription2()));
-		setState(() => container.append(createQr()));
-		setState(() => container.append(createInstruction()));
+		setState(() => containerRight.append(createDescription2()));
+		setState(() => containerRight.append(createQr()));
+		setState(() => containerRight.append(createInstruction()));
 		setState(() => body.append(createReturnButtonToMainMenu2()));
 	}
 }
 
+// function createFirstCard() {
+// 	let FirstCard = document.createElement("img");
+// 	FirstCard.classList.add("box");
+// 	FirstCard.classList.add("js");
+// 	FirstCard.classList.add("first-card");
+// 	FirstCard.src = "./kion.svg";
+	
+// 	FirstCard.addEventListener("click", onClickFirstCard);
+// 	return FirstCard;  
+// }
+
 function createFirstCard() {
-	let FirstCard = document.createElement("img");
-	FirstCard.classList.add("box");
+	let FirstCard = document.createElement("div");
 	FirstCard.classList.add("js");
 	FirstCard.classList.add("first-card");
-	FirstCard.src = "./kion.svg";
+	// FirstCard.src = "./kion.svg";
 	
+	// setState(() => FirstCard.classList.add("active"));
 	FirstCard.addEventListener("click", onClickFirstCard);
 	return FirstCard;  
 }
@@ -112,25 +123,25 @@ function createSecondCard() {
 	return SecondCard;  
 }
 
-function createDescription() {
-	let description = document.createElement("div");
-	description.classList.add("box");
-	description.classList.add("description");
-	description.classList.add("js");
-	description.textContent = "Описание первой карточки";
+// function createDescription() {
+// 	let description = document.createElement("div");
+// 	description.classList.add("box");
+// 	description.classList.add("description");
+// 	description.classList.add("js");
+// 	description.textContent = "Описание первой карточки";
 
-	return description;
-}
+// 	return description;
+// }
 
-function createDescription2() {
-	let description2 = document.createElement("div");
-	description2.classList.add("box");
-	description2.classList.add("description2");
-	description2.classList.add("js");
-	description2.textContent = "Описание второй карточки";
+// function createDescription2() {
+// 	let description2 = document.createElement("div");
+// 	description2.classList.add("box");
+// 	description2.classList.add("description2");
+// 	description2.classList.add("js");
+// 	description2.textContent = "Описание второй карточки";
 
-	return description2;
-}
+// 	return description2;
+// }
 
 function createQr() {
 	let qr = document.createElement("div");
@@ -143,15 +154,15 @@ function createQr() {
 	return qr;
 }
 
-function createInstruction() {
-	let instruction = document.createElement("div");
-	instruction.classList.add("box");
-	instruction.classList.add("instruction");
-	instruction.classList.add("js");
-	instruction.textContent = "Инструкция";
+// function createInstruction() {
+// 	let instruction = document.createElement("div");
+// 	instruction.classList.add("box");
+// 	instruction.classList.add("instruction");
+// 	instruction.classList.add("js");
+// 	instruction.textContent = "Инструкция";
 
-	return instruction;
-}
+// 	return instruction;
+// }
 
 // Кнопка НАЗАД для первой карточки
 function createReturnButtonToMainMenu1() {
@@ -167,11 +178,11 @@ function createReturnButtonToMainMenu1() {
 		let description = document.querySelector(".description");
 		let qr = document.querySelector(".qr");
 		setState(() => ReturnButtonToMainMenu1.classList.add("exiting"));
-		setState(() => instruction.classList.add("exiting"));
-		setState(() => description.classList.add("exiting"));
+		// setState(() => instruction.classList.add("exiting"));
+		// setState(() => description.classList.add("exiting"));
 		setState(() => qr.classList.add("exiting"));
 		
-		setState(() => container.append(createSecondCard()));
+		setState(() => containerRight.append(createSecondCard()));
 
 		FirstCard = document.querySelector(".first-card");
 		FirstCard.addEventListener("click", onClickFirstCard);
@@ -202,7 +213,7 @@ function createReturnButtonToMainMenu2() {
 		setState(() => description2.classList.add("exiting"));
 		setState(() => qr.classList.add("exiting"));
 
-		setState(() => container.prepend(createFirstCard()));
+		setState(() => containerLeft.prepend(createFirstCard()));
 
 		SecondCard = document.querySelector(".second-card");
 		SecondCard.addEventListener("click", onClickSecondCard);
@@ -215,30 +226,26 @@ function createReturnButtonToMainMenu2() {
 
 
 
-shuffleButton.addEventListener("click", () => {
-	setState(() => gsap.utils.shuffle(gsap.utils.toArray(".box")).forEach(box => container.append(box)));  
-});
-
 
 
 FirstCard.addEventListener("click", () => {
 	SecondCard = document.querySelector(".second-card");
 	setState(() => SecondCard.classList.add("exiting"));
 	setState(() => SecondCard.classList.add("js"));
-	setState(() => container.append(createDescription()));
-	setState(() => container.append(createQr()));
-	setState(() => container.append(createInstruction()));
-	setState(() => body.append(createReturnButtonToMainMenu1()));
+	// setState(() => containerRight.append(createDescription()));
+	setState(() => containerRight.append(createQr()));
+	// setState(() => containerRight.append(createInstruction()));
+	setState(() => containerRight.append(createReturnButtonToMainMenu1()));
 }, { once: true });
 
 SecondCard.addEventListener("click", () => {
 	FirstCard = document.querySelector(".first-card");
 	setState(() => FirstCard.classList.add("exiting"));
 	setState(() => FirstCard.classList.add("js"));
-	setState(() => container.append(createDescription2()));
-	setState(() => container.append(createQr()));
-	setState(() => container.append(createInstruction()));
-	setState(() => body.append(createReturnButtonToMainMenu2()));
+	setState(() => containerLeft.append(createDescription2()));
+	setState(() => containerLeft.append(createQr()));
+	setState(() => containerLeft.append(createInstruction()));
+	setState(() => containerRight.append(createReturnButtonToMainMenu2()));
 }, { once: true });
 
 
@@ -251,9 +258,15 @@ SecondCard.addEventListener("click", () => {
 
 
 function setState(action) {
-	state = Flip.getState(".box, .button");  
+	state = Flip.getState(".first-card, .second-card, .container, container__left, .container__right");  
 	action();
-	animate();
+	animate();Flip.from(state, {
+		absolute: true, // uses position: absolute during the flip to work around flexbox challenges
+		duration: 0.5, 
+		stagger: 0.1,
+		ease: "power1.inOut"
+		// you can use any other tweening properties here too, like onComplete, onUpdate, delay, etc. 
+	  });
 }
 
 function animate() {
