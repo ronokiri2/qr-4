@@ -11,7 +11,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(34, 34, 34);
+	background-color: white;
 }
 
 // .box {
@@ -78,9 +78,6 @@ body {
 	background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
 	margin-right: 1.5625vw; //20px
 
-
-	display:none;
-
 	&.active {
 		width: 80vw; //736
 	}
@@ -144,6 +141,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: grey;
+	background:  linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -286,7 +284,7 @@ body {
 	align-items: center;
 	width: 37.8125vw; //484px
 	height: 37.8125vw; //484px
-	background-color: grey;
+	background-color:#F0F1F5;
 	border-radius: 0.78125vw;
 
 	&__scan {
@@ -310,7 +308,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: grey;
+	background-color: #F0F1F5;
 	border-radius: 0.78125vw;
 	width: 37.8125vw; //484px
 	height: 11.5625vw;//148
