@@ -76,6 +76,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .left-card {
@@ -245,7 +248,6 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #301878;
-  display: none;
 }
 .right-card__logo {
   width: 18.36875vw;
