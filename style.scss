@@ -276,8 +276,8 @@ body {
 
 	&__qr {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
 	align-items: center;
 	width: 37.8125vw; //484px
 	height: 37.8125vw; //484px
@@ -310,14 +310,14 @@ body {
 		width: 37.8125vw; //484px
 		height: 11.5625vw;//148
 	
-		&__back {
+		&--back {
 			font-size: 2.65625vw; //34px
 			font-weight: 700;
 			line-height: 140%;
 			width: 31.5625vw; //404px
 		}
 	
-		&__bottom {
+		&--bottom {
 			display: flex;
 			flex-direction: row;
 			width: 31.5625vw; //404px

@@ -7,6 +7,7 @@ const container = document.querySelector(".container");
 const containerLeft = document.querySelector(".container__left");
 const containerRight = document.querySelector(".container__right");
 
+const vw = (coef) => window.innerWidth * (coef/100);
 
 
 let state;
@@ -18,8 +19,8 @@ console.log(input);
 
 // настройки QR кода
 const qrCode = new QRCodeStyling({
-	width: 150,
-	height: 150,
+	width: vw(23.4375),
+	height: vw(23.4375),
 	type: "svg",
 	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
 	image: "./kion.svg",
@@ -29,7 +30,7 @@ const qrCode = new QRCodeStyling({
 		type: "rounded"
 	},
 	backgroundOptions: {
-		color: "red",
+		color: "transparent",
 	},
 	imageOptions: {
 		crossOrigin: "anonymous",
@@ -43,6 +44,8 @@ function createQr() {
 	qr.classList.add("js");
 
 	// добавить qr code
-	qrCode.append(qr);
 	return qr;
 }
+
+let qr = document.querySelector(".left2__qr");
+qrCode.append(qr);
