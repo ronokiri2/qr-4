@@ -1,10 +1,9 @@
 html {
   font-family: system-ui, sans-serif;
+  position: relative;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,14 +29,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 96.875vw;
-  height: 50.9375vw;
-  margin: auto;
+  padding-left: 1.5625vw;
+  padding-right: 1.5625vw;
+  height: 100vh;
+  position: relative;
 }
 .container__left {
   width: 47.65625vw;
@@ -162,6 +165,7 @@ body {
 }
 
 .left {
+  will-change: transform;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +177,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 96.875vw;
+  width: 100vw;
+  padding-left: 1.5625vw;
+  padding-right: 1.5625vw;
 }
 .left-description {
   width: 57.5vw;
@@ -196,6 +202,7 @@ body {
   border-radius: 0.78125vw;
 }
 .left-description__group {
+  will-change: transform;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,12 +220,14 @@ body {
   margin-bottom: 0.625vw;
 }
 .left-description__group--title {
+  will-change: transform;
   font-size: 2.65625vw;
   font-weight: 700;
   line-height: 140%;
   margin-right: 1.328125vw;
 }
 .left-description__group--30days {
+  will-change: transform;
   width: 16.5625vw;
   height: 3.125vw;
   line-height: 3.125vw;
@@ -233,102 +242,18 @@ body {
   margin-right: 1.5625vw;
 }
 .left-description__group--dalee149rub {
+  will-change: transform;
   font-size: 1.40625vw;
   font-weight: 400;
   line-height: 140%;
 }
 .left-description__text {
+  will-change: transform;
   width: 49.453125vw;
   font-size: 1.40625vw;
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 3.28125vw;
-}
-
-.right-card {
-  width: 31.25vw;
-  height: 31.25vw;
-  border-radius: 0.78125vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: #301878;
-}
-.right-card__logo {
-  width: 18.36875vw;
-  margin-bottom: 0.8375vw;
-}
-.right-card__price {
-  margin-bottom: 4.296875vw;
-  font-size: 3.75vw;
-  font-weight: 800;
-  line-height: 4.296875vw;
-  color: white;
-  width: 12.890625vw;
-  height: 4.296875vw;
-  background-color: black;
-  background: linear-gradient(85.19deg, #160D37 2.65%, #1B0E64 95.88%);
-  border-radius: 2.1875vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-right: 2.8125vw;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-}
-.right-card__price--number {
-  display: inline;
-}
-.right-card__price--rubleAndMonth {
-  margin-top: -1.3vw;
-}
-.right-card__price--ruble {
-  font-size: 2.03125vw;
-  line-height: 2.03125vw;
-}
-.right-card__price--month {
-  font-size: 0.9375vw;
-  font-weight: 400;
-  line-height: 0.9375vw;
-}
-.right-card__button {
-  width: 20.9375vw;
-  height: 4.375vw;
-  border-radius: 0.3125vw;
-  margin-bottom: 3.125vw;
-  background-color: pink;
-  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-  font-size: 1.40625vw;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-}
-
-.description {
-  width: 20vw;
-  height: 20vw;
-  background-color: grey;
-}
-
-.instruction {
-  width: 20vw;
-  height: 20vw;
-  background-color: grey;
 }
 
 .left2 {
@@ -417,6 +342,268 @@ body {
   margin-right: 1.40625vw;
 }
 .left2__return--bottom--img {
+  width: 13.2671875vw;
+}
+
+.right-card {
+  width: 31.25vw;
+  height: 31.25vw;
+  border-radius: 0.78125vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #301878;
+}
+.right-card__logo {
+  width: 18.36875vw;
+  margin-bottom: 0.8375vw;
+}
+.right-card__price {
+  margin-bottom: 4.296875vw;
+  font-size: 3.75vw;
+  font-weight: 800;
+  line-height: 4.296875vw;
+  color: white;
+  width: 12.890625vw;
+  height: 4.296875vw;
+  background-color: black;
+  background: linear-gradient(85.19deg, #160D37 2.65%, #1B0E64 95.88%);
+  border-radius: 2.1875vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 2.8125vw;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+}
+.right-card__price--number {
+  display: inline;
+}
+.right-card__price--rubleAndMonth {
+  margin-top: -1.3vw;
+}
+.right-card__price--ruble {
+  font-size: 2.03125vw;
+  line-height: 2.03125vw;
+}
+.right-card__price--month {
+  font-size: 0.9375vw;
+  font-weight: 400;
+  line-height: 0.9375vw;
+}
+.right-card__button {
+  width: 20.9375vw;
+  height: 4.375vw;
+  border-radius: 0.3125vw;
+  margin-bottom: 3.125vw;
+  background-color: pink;
+  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
+  font-size: 1.40625vw;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.description {
+  width: 20vw;
+  height: 20vw;
+  background-color: grey;
+}
+
+.instruction {
+  width: 20vw;
+  height: 20vw;
+  background-color: grey;
+}
+
+.right {
+  will-change: transform;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+  padding-left: 1.5625vw;
+  padding-right: 1.5625vw;
+}
+.right-description {
+  width: 57.5vw;
+  height: 50.9375vw;
+  background-color: grey;
+  background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.78125vw;
+}
+.right-description__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 49.453125vw;
+  margin-bottom: 0.625vw;
+}
+.right-description__group--title {
+  font-size: 2.65625vw;
+  font-weight: 700;
+  line-height: 140%;
+  margin-right: 1.328125vw;
+}
+.right-description__group--30days {
+  width: 16.5625vw;
+  height: 3.125vw;
+  line-height: 3.125vw;
+  border-radius: 1.5625vw;
+  text-align: center;
+  vertical-align: middle;
+  background-color: pink;
+  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #C4C4C4;
+  color: white;
+  font-size: 1.40625vw;
+  font-weight: 400;
+  margin-right: 1.5625vw;
+}
+.right-description__group--dalee149rub {
+  font-size: 1.40625vw;
+  font-weight: 400;
+  line-height: 140%;
+}
+.right-description__text {
+  width: 49.453125vw;
+  font-size: 1.40625vw;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 3.28125vw;
+}
+
+.right2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.right2__qr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 37.8125vw;
+  height: 37.8125vw;
+  background-color: #F0F1F5;
+  border-radius: 0.78125vw;
+}
+.right2__qr--scan {
+  font-size: 2.65625vw;
+  font-weight: 700;
+  line-height: 140%;
+  width: 31.5625vw;
+}
+.right2__qr--link {
+  font-size: 1.40625vw;
+  font-weight: 400;
+  line-height: 140%;
+  width: 31.5625vw;
+  margin-bottom: 3.125vw;
+}
+.right2__return {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F0F1F5;
+  border-radius: 0.78125vw;
+  width: 37.8125vw;
+  height: 11.5625vw;
+}
+.right2__return--back {
+  font-size: 2.65625vw;
+  font-weight: 700;
+  line-height: 140%;
+  width: 31.5625vw;
+}
+.right2__return--bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 31.5625vw;
+}
+.right2__return--bottom--text {
+  font-size: 1.40625vw;
+  font-weight: 400;
+  line-height: 140%;
+  margin-right: 1.40625vw;
+}
+.right2__return--bottom--img {
   width: 13.2671875vw;
 }
 
