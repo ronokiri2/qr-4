@@ -2,6 +2,7 @@
 gsap.registerPlugin(Flip);
 gsap.config({ trialWarn: false });
 const vw = (coef) => window.innerWidth * (coef/100);
+const vh = (coef) => window.innerHeight * (coef/100);
 
 console.log(window.innerWidth * (1/100))
 const body = document.querySelector("body");
@@ -15,28 +16,79 @@ const rightCard = document.querySelector(".right-card");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 
-gsap.set(left, {scale: 0, x: vw(-100)});
-gsap.set(right, {scale: 0, x: vw(100)});
+
+let qrLeft = document.querySelector(".left2__qr");
+let qrRight = document.querySelector(".right2__qr");
+
+gsap.set(left, {scale: 0.5, opacity: 0.1, y: vh(-100)});
+gsap.set(right, {scale: 0.5, opacity: 0.1, y: vh(100)});
 
 leftCard.addEventListener("click", () => {
 	gsap.to(left, {
 		duration: 1, 
 		scale: 1,
-		x: 0
+		y: 0,
+		opacity: 1
 	});
+	gsap.to(container, {
+		duration: 1, 
+		scale: 1,
+		y: vh(100),
+		opacity: 1
+	});
+	qrCode.append(qrLeft);
 })
 
 rightCard.addEventListener("click", () => {
 	gsap.to(right, {
 		duration: 1, 
 		scale: 1,
-		x: 0
+		y: 0,
+		opacity: 1
 	});
+	gsap.to(container, {
+		duration: 1, 
+		scale: 1,
+		y: vh(-100),
+		opacity: 1
+	});
+
+	qrCode.append(qrRight);
 })
 
 
 
+let returnLeft = document.querySelector(".left2__return");
+let returnRight = document.querySelector(".right2__return");
 
+
+returnLeft.addEventListener("click", () => {
+	gsap.to(left, {
+		duration: 1, 
+		scale: 0.5,
+		y: vh(-100)
+	});
+	gsap.to(container, {
+		duration: 1, 
+		scale: 1,
+		y: vh(0),
+		opacity: 1
+	});
+})
+
+returnRight.addEventListener("click", () => {
+	gsap.to(right, {
+		duration: 1, 
+		scale: 0.9,
+		y: vh(100)
+	});
+	gsap.to(container, {
+		duration: 1, 
+		scale: 1,
+		y: vh(0),
+		opacity: 1
+	});
+})
 
 
 
@@ -82,8 +134,5 @@ function createQr() {
 	// добавить qr code
 	return qr;
 }
-
-let qr = document.querySelector(".left2__qr");
-qrCode.append(qr);
 
 
