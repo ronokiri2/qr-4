@@ -79,7 +79,7 @@ returnLeft.addEventListener("click", () => {
 returnRight.addEventListener("click", () => {
 	gsap.to(right, {
 		duration: 1, 
-		scale: 0.9,
+		scale: 0.5,
 		y: vh(100)
 	});
 	gsap.to(container, {
@@ -103,8 +103,7 @@ const qrCode = new QRCodeStyling({
 	height: vw(23.4375),
 	type: "svg",
 	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
-	image: "./kion.svg",
-	imageSize: "1",
+
 	dotsOptions: {
 		color: "#C32F77",
 		type: "rounded"

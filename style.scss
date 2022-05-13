@@ -1,9 +1,26 @@
 // добавить функцию открытия сайта в фуллскрин
 
+@font-face {
+	font-weight: 700; /* bold */
+	font-family: 'Hero New';
+	src: url('../fonts/Hero-New-Bold-subset.woff2');
+}
+@font-face {
+	font-weight: 400; /* regular / normal */
+	font-family: 'Hero New';
+	src: url('../fonts/Hero-New-Regular-subset.woff2');
+}
+
+
+::selection {
+	background-color: transparent;
+}
 
 html {
-	font-family: system-ui, sans-serif;
+	font-family: 'Hero New', system-ui, sans-serif;
+	-webkit-tap-highlight-color: transparent;
 	position: relative;
+	background: linear-gradient(68.66deg, #EBECF0 0%, #FFFFFF 100%);
 }
 body {
 	// width: 100vw;
@@ -12,7 +29,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: white;
 // overflow: hidden;
 	position: relative;
 }
@@ -148,8 +164,9 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		align-items: center;
 		border-radius: 0.78125vw;
+		padding-left: 3.125vw;
+		padding-right: 3.125vw;
 
 		&__group {
 			will-change: transform;
@@ -207,6 +224,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	
 
 	&__qr {
 	display: flex;
@@ -217,6 +235,11 @@ body {
 	height: 37.8125vw; //484px
 	background-color:#F0F1F5;
 	border-radius: 0.78125vw;
+	box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+
+		svg {
+			margin-bottom: 2.421875vw;
+		}
 
 		&--scan {
 			font-size: 2.65625vw; //34px
@@ -243,7 +266,8 @@ body {
 		border-radius: 0.78125vw;
 		width: 37.8125vw; //484px
 		height: 11.5625vw;//148
-	
+		box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+		
 		&--back {
 			font-size: 2.65625vw; //34px
 			font-weight: 700;

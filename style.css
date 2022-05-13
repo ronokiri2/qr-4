@@ -1,6 +1,27 @@
+@font-face {
+  font-weight: 700;
+  /* bold */
+  font-family: "Hero New";
+  src: url("../fonts/Hero-New-Bold-subset.woff2");
+}
+@font-face {
+  font-weight: 400;
+  /* regular / normal */
+  font-family: "Hero New";
+  src: url("../fonts/Hero-New-Regular-subset.woff2");
+}
+::-moz-selection {
+  background-color: transparent;
+}
+::selection {
+  background-color: transparent;
+}
+
 html {
-  font-family: system-ui, sans-serif;
+  font-family: "Hero New", system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
   position: relative;
+  background: linear-gradient(68.66deg, #EBECF0 0%, #FFFFFF 100%);
 }
 
 body {
@@ -17,7 +38,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
   position: relative;
 }
 
@@ -196,10 +216,9 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 0.78125vw;
+  padding-left: 3.125vw;
+  padding-right: 3.125vw;
 }
 .left-description__group {
   will-change: transform;
@@ -286,6 +305,11 @@ body {
   height: 37.8125vw;
   background-color: #F0F1F5;
   border-radius: 0.78125vw;
+  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+}
+.left2__qr svg {
+  margin-bottom: 2.421875vw;
 }
 .left2__qr--scan {
   font-size: 2.65625vw;
@@ -318,6 +342,8 @@ body {
   border-radius: 0.78125vw;
   width: 37.8125vw;
   height: 11.5625vw;
+  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .left2__return--back {
   font-size: 2.65625vw;
