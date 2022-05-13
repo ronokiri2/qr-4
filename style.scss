@@ -267,7 +267,7 @@ body {
 		width: 37.8125vw; //484px
 		height: 11.5625vw;//148
 		box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
-		
+
 		&--back {
 			font-size: 2.65625vw; //34px
 			font-weight: 700;
@@ -391,7 +391,7 @@ body {
 		width: 57.5vw; //736px
 		height: 50.9375vw; //652px
 		background-color: grey;
-		background:  linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
+		background: linear-gradient(231.88deg, #0F034B 0%, #050118 100%), #ECECEC;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -411,6 +411,7 @@ body {
 				font-weight: 700;
 				line-height: 140%;
 				margin-right: 1.328125vw;
+				color: white;
 			}
 	
 			&--30days {
@@ -432,6 +433,7 @@ body {
 				font-size: 1.40625vw;
 				font-weight: 400;
 				line-height: 140%;
+				color: white;
 			}
 		}
 		&__text {
@@ -440,6 +442,7 @@ body {
 			font-weight: 400;
 			line-height: 140%;
 			margin-bottom: 3.28125vw; //42px
+			color: white;
 		}
 	}
 

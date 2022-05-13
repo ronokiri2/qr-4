@@ -32,7 +32,7 @@ leftCard.addEventListener("click", () => {
 	});
 	gsap.to(container, {
 		duration: 1, 
-		scale: 1,
+		scale: 0.5,
 		y: vh(100),
 		opacity: 1
 	});
@@ -48,7 +48,7 @@ rightCard.addEventListener("click", () => {
 	});
 	gsap.to(container, {
 		duration: 1, 
-		scale: 1,
+		scale: 0.5,
 		y: vh(-100),
 		opacity: 1
 	});
