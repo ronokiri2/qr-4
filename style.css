@@ -99,7 +99,7 @@ body {
   text-align: center;
 }
 .preview__content--button {
-  width: 20.9375vw;
+  width: 22vw;
   height: 4.375vw;
   font-size: 1.40625vw;
   font-weight: 400;
@@ -255,6 +255,10 @@ body {
 .left {
   will-change: transform;
   position: absolute;
+  top: -100vh;
+  left: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,7 +269,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
+  height: 100vh;
   padding-left: 1.5625vw;
   padding-right: 1.5625vw;
 }
@@ -354,6 +362,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 50.9375vw;
 }
 .left2__qr {
   display: -webkit-box;
@@ -528,6 +537,10 @@ body {
 .right {
   will-change: transform;
   position: absolute;
+  top: 100vh;
+  left: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,7 +551,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
+  height: 100vh;
   padding-left: 1.5625vw;
   padding-right: 1.5625vw;
 }
@@ -626,6 +643,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 50.9375vw;
 }
 .right2__qr {
   display: -webkit-box;

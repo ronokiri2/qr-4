@@ -21,8 +21,8 @@ const right = document.querySelector(".right");
 let qrLeft = document.querySelector(".left2__qr");
 let qrRight = document.querySelector(".right2__qr");
 
-gsap.set(left, {scale: 0.5, opacity: 0.1, y: vh(-100)});
-gsap.set(right, {scale: 0.5, opacity: 0.1, y: vh(100)});
+// gsap.set(left, {scale: 0.5, opacity: 0.1, y: vh(-100)});
+// gsap.set(right, {scale: 0.5, opacity: 0.1, y: vh(100)});
 
 
 
@@ -50,35 +50,13 @@ preview.addEventListener("click", () => {
 })
 
 
-let inactivityTime = function () {
-	let time;
-	window.onload = resetTimer;
-	document.onmousemove = resetTimer;
-	document.onkeypress = resetTimer;
-	function logout() {
-	  console.log("You are now logged out.")
-
-	  gsap.to(preview, {
-		duration: 1, 
-		scale: 1,
-		x: 0,
-		opacity: 1
-	});
-	}
-	function resetTimer() {
-	  clearTimeout(time);
-	  time = setTimeout(logout, 60000)
-	}
-  };
-  inactivityTime();
-  console.log('Please wait...');
 
 
 leftCard.addEventListener("click", () => {
 	gsap.to(left, {
 		duration: 1, 
 		scale: 1,
-		y: 0,
+		y: vh(100),
 		opacity: 1
 	});
 	gsap.to(container, {
@@ -94,7 +72,7 @@ rightCard.addEventListener("click", () => {
 	gsap.to(right, {
 		duration: 1, 
 		scale: 1,
-		y: 0,
+		y: vh(-100),
 		opacity: 1
 	});
 	gsap.to(container, {
@@ -252,3 +230,25 @@ function createQr() {
 }
 
 
+let inactivityTime = function () {
+	let time;
+	window.onload = resetTimer;
+	document.onmousemove = resetTimer;
+	document.onkeypress = resetTimer;
+	function logout() {
+	  console.log("You are now logged out.")
+
+	  gsap.to(preview, {
+		duration: 1, 
+		scale: 1,
+		x: 0,
+		opacity: 1
+	});
+	}
+	function resetTimer() {
+	  clearTimeout(time);
+	  time = setTimeout(logout, 60000)
+	}
+  };
+  inactivityTime();
+  console.log('Please wait...');
