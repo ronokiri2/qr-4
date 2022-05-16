@@ -61,13 +61,13 @@ body {
   height: 100vh;
   overflow: hidden;
   z-index: 2;
+  background-color: #E5E5E5;
 }
 .preview__video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  margin: auto;
+  width: 91.09375vw;
+  border-radius: 0.78125vw;
 }
 .preview__content {
   display: -webkit-box;
@@ -80,7 +80,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   z-index: 3;
+  height: 41.875vw;
 }
 .preview__content--logo {
   width: 28.59375vw;
@@ -99,6 +103,10 @@ body {
   height: 4.375vw;
   font-size: 1.40625vw;
   font-weight: 400;
+  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
+  text-align: center;
+  color: white;
+  border-radius: 0.3125vw;
 }
 
 .container {
@@ -637,6 +645,8 @@ body {
   height: 37.8125vw;
   background-color: #F0F1F5;
   border-radius: 0.78125vw;
+  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .right2__qr--scan {
   font-size: 2.65625vw;
@@ -669,6 +679,8 @@ body {
   border-radius: 0.78125vw;
   width: 37.8125vw;
   height: 11.5625vw;
+  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .right2__return--back {
   font-size: 2.65625vw;
