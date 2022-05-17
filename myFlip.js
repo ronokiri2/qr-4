@@ -1,7 +1,5 @@
 'use strict';
 // добавить ресайзы для вертикали
-gsap.registerPlugin(Flip);
-gsap.config({ trialWarn: false });
 const vw = (coef) => window.innerWidth * (coef/100);
 const vh = (coef) => window.innerHeight * (coef/100);
 
@@ -30,13 +28,16 @@ let qrRight = document.querySelector(".right2__qr");
 const preview = document.querySelector(".preview");
 const leftText = document.querySelector(".left-description__text");
 
-gsap.set(preview, {scale: 1, x: vw(100)});
+
+
+
+
 
 leftText.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 1, 
 		scale: 1,
-		x: 0,
+		y: 0,
 		opacity: 1
 	});
 })
@@ -44,7 +45,7 @@ preview.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 1, 
 		scale: 1,
-		x: vw(100),
+		y: vh(100),
 		opacity: 1
 	});
 })
@@ -66,6 +67,11 @@ leftCard.addEventListener("click", () => {
 		opacity: 1
 	});
 	qrCode.append(qrLeft);
+
+	window.addEventListener('resize', function(){
+		let qrCanvasLeft = qrLeft.querySelector("canvas");
+		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
+	});
 })
 
 rightCard.addEventListener("click", () => {
@@ -84,65 +90,11 @@ rightCard.addEventListener("click", () => {
 
 	qrCode.append(qrRight);
 
-	// window.addEventListener('resize', function(event) {
-
-	// 	const svg2 = qrRight.querySelector('canvas');
-
-	// 	// настройки QR кода
-	// 	const qrCode = new QRCodeStyling({
-	// 		width: vw(23.4375),
-	// 		height: vw(23.4375),
-	// 		type: "canvas",
-	// 		data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
-
-	// 		dotsOptions: {
-	// 			color: "#C32F77",
-	// 			type: "rounded"
-	// 		},
-	// 		cornersSquareOptions: {
-	// 			color: "#C32F77",
-	// 			type: "dot"
-	// 		},
-	// 		cornersDotOptions: {
-	// 			color: "#C32F77",
-	// 			type: "dot"
-	// 		},
-	// 		backgroundOptions: {
-	// 			color: "transparent",
-	// 		},
-	// 		imageOptions: {
-	// 			crossOrigin: "anonymous",
-	// 			margin: 0
-	// 		}
-	// 	});
-	// 	// console.log(vw(1))
-	// 	// let svgSize = `${vw(23.4375)}px`;
-	// 	// console.log(svgSize)
-	// 	// svg2.setAttribute("width", `${svgSize}`);
-	// 	// svg2.setAttribute("height", `${svgSize}`);
-	
-	// 	console.log(svg2)
-	// 	svg2.remove()
-
-	// 	qrCode.append(qrRight);
-	// }, true);
+	window.addEventListener('resize', function(){
+		let qrCanvasRight = qrRight.querySelector("canvas");
+		qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
+	});
 })
-
-	// window.addEventListener('resize', function(event) {
-
-	// 	const svg2 = qrRight.querySelector('svg');
-
-	// 	console.log(vw(1))
-	// 	let svgSize = `${vw(23.4375)}px`;
-	// 	console.log(svgSize)
-	// 	svg2.setAttribute("width", `${svgSize}`);
-	// 	svg2.setAttribute("height", `${svgSize}`);
-	
-	// 	console.log(svg2)
-	// 	svg2.remove()
-
-	// 	qrCode.append(qrRight);
-	// }, true);
 
 let returnLeft = document.querySelector(".left2__return");
 let returnRight = document.querySelector(".right2__return");
@@ -174,12 +126,6 @@ returnRight.addEventListener("click", () => {
 		y: vh(0),
 		opacity: 1
 	});
-
-	// setTimeout(function() {
-	// 	const svg2 = qrRight.querySelector('svg');
-
-	// 	svg2.remove()
-	// }, 50);
 })
 
 
@@ -193,7 +139,7 @@ console.log(input);
 const qrCode = new QRCodeStyling({
 	width: vw(23.4375),
 	height: vw(23.4375),
-	type: "svg",
+	type: "canvas",
 	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
 
 	dotsOptions: {
@@ -216,18 +162,6 @@ const qrCode = new QRCodeStyling({
 		margin: 0
 	}
 });
-
-
-
-
-function createQr() {
-	let qr = document.createElement("div");
-	qr.classList.add("qr");
-	qr.classList.add("js");
-
-	// добавить qr code
-	return qr;
-}
 
 
 let inactivityTime = function () {
