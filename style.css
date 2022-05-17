@@ -206,9 +206,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   width: 100vw;
   height: 100vh;
   padding-left: 1.5625vw;
@@ -234,6 +231,8 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   height: min(3.90625vw, 100vh - 55.9375vw);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .left-description {
   width: 57.5vw;

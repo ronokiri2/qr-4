@@ -158,7 +158,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
 	// flex-direction: row;
 	// justify-content: space-between;
 	// align-items: center;
@@ -183,6 +182,7 @@ body {
 		margin-bottom: auto;
 		// width: 10.80625vw;
 		height: min(3.90625vw, 100vh - 55.9375vw);
+		align-self: flex-start;
 	}
 	
 	&-description {
