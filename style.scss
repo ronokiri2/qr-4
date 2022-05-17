@@ -479,7 +479,7 @@ body {
 		canvas {
 			margin-bottom: 2.421875vw;
 		}
-		
+
 		&--scan {
 			font-size: 2.65625vw; //34px
 			font-weight: 700;
@@ -552,6 +552,7 @@ body {
 	// }
 
 	&__video {
+		filter: brightness(0.7);
 		position: absolute;
 		margin: auto;
 		width: 91.09375vw;

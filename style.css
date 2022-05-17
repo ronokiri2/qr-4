@@ -687,6 +687,8 @@ body {
           transform: translateY(100vh);
 }
 .preview__video {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
   position: absolute;
   margin: auto;
   width: 91.09375vw;
