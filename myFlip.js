@@ -148,11 +148,11 @@ const qrCode = new QRCodeStyling({
 	},
 	cornersSquareOptions: {
 		color: "#C32F77",
-		type: "dot"
+		type: "extra-rounded"
 	},
 	cornersDotOptions: {
 		color: "#C32F77",
-		type: "dot"
+		// type: "rounded"
 	},
 	backgroundOptions: {
 		color: "transparent",
