@@ -190,9 +190,12 @@ body {
   will-change: transform;
   position: absolute;
   top: -100vh;
+  top: 0;
   left: 0;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,6 +203,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100vw;
   height: 100vh;
   padding-left: 1.5625vw;
@@ -486,9 +492,12 @@ body {
   will-change: transform;
   position: absolute;
   top: 100vh;
+  top: 0;
   left: 0;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,11 +703,8 @@ body {
           align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   z-index: 2;
   background-color: #E5E5E5;
-  -webkit-transform: translateY(100vh);
-          transform: translateY(100vh);
 }
 .preview__video {
   -webkit-filter: brightness(0.7);

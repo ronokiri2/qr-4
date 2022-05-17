@@ -21,6 +21,7 @@ html {
 	-webkit-tap-highlight-color: transparent;
 	position: relative;
 	background: linear-gradient(68.66deg, #EBECF0 0%, #FFFFFF 100%);
+	
 }
 body {
 	// width: 100vw;
@@ -150,10 +151,13 @@ body {
 	will-change: transform;
 	position: absolute;
 	top: -100vh;
+	top: 0;
 	left: 0;
 	transform: scale(0.5);
+	transform: scale(0);
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	// flex-direction: row;
 	// justify-content: space-between;
 	// align-items: center;
@@ -403,8 +407,10 @@ body {
 	will-change: transform;
 	position: absolute;
 	top: 100vh;
+	top: 0;
 	left: 0;
 	transform: scale(0.5);
+	transform: scale(0);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -560,10 +566,10 @@ body {
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 	z-index: 2;
 	background-color: #E5E5E5;
-	transform: translateY(100vh);
+	// transform: translateY(100vh);
 	// &__relative {
 	// 	position: relative;
 	// }

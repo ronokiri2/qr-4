@@ -1,13 +1,22 @@
 'use strict';
-// добавить ресайзы для вертикали
-const vw = (coef) => window.innerWidth * (coef/100);
-const vh = (coef) => window.innerHeight * (coef/100);
+
+let vw = (coef) => {
+	return window.innerWidth * (coef/100);
+}
+let vh = (coef) => window.innerHeight * (coef/100);
+
+window.addEventListener('resize', function(){
+	vw = (coef) => window.innerWidth * (coef/100);
+	vh = (coef) => window.innerHeight * (coef/100);
+});
+window.addEventListener('deviceorientation', function(){
+	vw = (coef) => window.innerWidth * (coef/100);
+	vh = (coef) => window.innerHeight * (coef/100);
+});
 
 console.log(window.innerWidth * (1/100))
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
-const containerLeft = document.querySelector(".container__left");
-const containerRight = document.querySelector(".container__right");
 
 
 const leftCard = document.querySelector(".left-card");
@@ -19,9 +28,6 @@ const right = document.querySelector(".right");
 let qrLeft = document.querySelector(".left2__qr");
 let qrRight = document.querySelector(".right2__qr");
 
-// gsap.set(left, {scale: 0.5, opacity: 0.1, y: vh(-100)});
-// gsap.set(right, {scale: 0.5, opacity: 0.1, y: vh(100)});
-
 
 
 
@@ -30,9 +36,18 @@ const leftText = document.querySelector(".left-description__text");
 
 
 
+gsap.to(left, {x: vw(-100), duration: 0});
+gsap.to(right, {x: vw(100), duration: 0});
 
+window.addEventListener('resize', function(){
+	gsap.to(".left, .container, .right", 
+	{
+		width: vw(100), 
+		height: vh(100)
+	});
+});
 
-
+// показать превью
 leftText.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 1, 
@@ -51,46 +66,63 @@ preview.addEventListener("click", () => {
 })
 
 
-
-
+// левая карточка
 leftCard.addEventListener("click", () => {
-	gsap.to(left, {
-		duration: 1, 
-		scale: 1,
-		y: vh(100),
-		opacity: 1
+	gsap.from(".left", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+	gsap.to(".left, .container, .right", 
+	{
+		scale: 1, 
+		duration: 0.7,
+		x: '+=100%'
 	});
-	gsap.to(container, {
-		duration: 1, 
-		scale: 0.5,
-		y: vh(100),
-		opacity: 1
-	});
+	gsap.to(".container", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
 	qrCode.append(qrLeft);
 
 	window.addEventListener('resize', function(){
 		let qrCanvasLeft = qrLeft.querySelector("canvas");
 		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
 	});
+	window.addEventListener('deviceorientation', function(){
+		let qrCanvasLeft = qrLeft.querySelector("canvas");
+		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
+	});
 })
 
+
+// правая карточка
 rightCard.addEventListener("click", () => {
-	gsap.to(right, {
-		duration: 1, 
-		scale: 1,
-		y: vh(-100),
-		opacity: 1
+	gsap.from(".right", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+	gsap.to(".left, .container, .right", 
+	{
+		scale: 1, 
+		duration: 0.7,
+		x: '-=100%'
 	});
-	gsap.to(container, {
-		duration: 1, 
-		scale: 0.5,
-		y: vh(-100),
-		opacity: 1
-	});
+	gsap.to(".container", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
 
 	qrCode.append(qrRight);
 
 	window.addEventListener('resize', function(){
+		let qrCanvasRight = qrRight.querySelector("canvas");
+		qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
+	});
+	window.addEventListener('deviceorientation', function(){
 		let qrCanvasRight = qrRight.querySelector("canvas");
 		qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
 	});
@@ -101,31 +133,42 @@ let returnRight = document.querySelector(".right2__return");
 
 
 returnLeft.addEventListener("click", () => {
-	gsap.to(left, {
-		duration: 1, 
-		scale: 0.5,
-		y: vh(-100)
+	gsap.from(".container", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+	gsap.to(".left, .container, .right", 
+	{
+		scale: 1, 
+		duration: 0.7,
+		x: '-=100%'
 	});
-	gsap.to(container, {
-		duration: 1, 
-		scale: 1,
-		y: vh(0),
-		opacity: 1
-	});
+	gsap.to(".left", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
 })
 
 returnRight.addEventListener("click", () => {
-	gsap.to(right, {
-		duration: 1, 
-		scale: 0.5,
-		y: vh(100)
+	gsap.from(".container", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+	gsap.to(".left, .container, .right", 
+	{
+		scale: 1, 
+		duration: 0.7,
+		x: '+=100%'
 	});
-	gsap.to(container, {
-		duration: 1, 
-		scale: 1,
-		y: vh(0),
-		opacity: 1
-	});
+	gsap.to(".right", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+	
 })
 
 
