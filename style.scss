@@ -158,6 +158,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: flex-start;
 	// flex-direction: row;
 	// justify-content: space-between;
 	// align-items: center;
@@ -171,15 +172,17 @@ body {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: auto;
 	}
 
 	&-logo {
 		// position: absolute;
 		// top: 1.796875vw;
 		// left: 1.5625vw;
-		margin-top: 1.796875vw;
-		margin-bottom: 1.484375vw;
-		width: 10.80625vw;
+		margin-top: auto;
+		margin-bottom: auto;
+		// width: 10.80625vw;
+		height: min(3.90625vw, 100vh - 55.9375vw);
 	}
 	
 	&-description {

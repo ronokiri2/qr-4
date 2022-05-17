@@ -1,10 +1,12 @@
 'use strict';
-
+// также перемещать и видео превью
 let vw = (coef) => {
 	return window.innerWidth * (coef/100);
 }
 let vh = (coef) => window.innerHeight * (coef/100);
 
+
+// наверное, не работает
 window.addEventListener('resize', function(){
 	vw = (coef) => window.innerWidth * (coef/100);
 	vh = (coef) => window.innerHeight * (coef/100);
@@ -13,8 +15,9 @@ window.addEventListener('deviceorientation', function(){
 	vw = (coef) => window.innerWidth * (coef/100);
 	vh = (coef) => window.innerHeight * (coef/100);
 });
+//
 
-console.log(window.innerWidth * (1/100))
+console.log(vw(100))
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
 
