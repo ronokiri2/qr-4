@@ -39,8 +39,8 @@ const leftText = document.querySelector(".left-description__text");
 
 
 
-gsap.to(left, {x: vw(-100), duration: 0});
-gsap.to(right, {x: vw(100), duration: 0});
+gsap.to(left, {xPercent: -100, duration: 0});
+gsap.to(right, {xPercent: 100, duration: 0});
 
 window.addEventListener('resize', function(){
 	gsap.to(".left, .container, .right", 
@@ -53,17 +53,17 @@ window.addEventListener('resize', function(){
 // показать превью
 leftText.addEventListener("click", () => {
 	gsap.to(preview, {
-		duration: 1, 
+		duration: 0.7, 
 		scale: 1,
-		y: 0,
+		yPercent: 0,
 		opacity: 1
 	});
 })
 preview.addEventListener("click", () => {
 	gsap.to(preview, {
-		duration: 1, 
-		scale: 1,
-		y: vh(100),
+		duration: 0.7, 
+		scale: 0.7,
+		yPercent: 100,
 		opacity: 1
 	});
 })
@@ -221,7 +221,7 @@ let inactivityTime = function () {
 	  gsap.to(preview, {
 		duration: 1, 
 		scale: 1,
-		x: 0,
+		yPercent: 0,
 		opacity: 1
 	});
 	}

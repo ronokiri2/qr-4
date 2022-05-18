@@ -1,22 +1,27 @@
 @font-face {
+  font-weight: 800;
+  /* Extra bold */
+  font-family: "Hero New";
+  src: url("./fonts/Hero-New-ExtraBold.woff2");
+}
+@font-face {
   font-weight: 700;
   /* bold */
   font-family: "Hero New";
-  src: url("../fonts/Hero-New-Bold-subset.woff2");
+  src: url("./fonts/Hero-New-Bold-subset.woff2");
 }
 @font-face {
   font-weight: 400;
   /* regular / normal */
   font-family: "Hero New";
-  src: url("../fonts/Hero-New-Regular-subset.woff2");
+  src: url("./fonts/Hero-New-Regular-subset.woff2");
 }
-::-moz-selection {
-  background-color: transparent;
+@font-face {
+  font-weight: 400;
+  /* regular / normal */
+  font-family: "MTS Sans";
+  src: url("./fonts/MTSSans-Regular__W.woff2");
 }
-::selection {
-  background-color: transparent;
-}
-
 html {
   font-family: "Hero New", system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -126,6 +131,10 @@ body {
           justify-content: flex-end;
   background-color: grey;
   background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
+  background-image: url("./grey.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-right: 1.5625vw;
 }
 .left-card.active {
@@ -133,11 +142,11 @@ body {
 }
 .left-card__logo {
   width: 18.36875vw;
-  margin-bottom: 0.8375vw;
+  margin-bottom: 1.1vw;
 }
 .left-card__price {
-  margin-bottom: 4.296875vw;
-  font-size: 3.75vw;
+  margin-bottom: 4.6vw;
+  font-size: 3.6vw;
   font-weight: 800;
   line-height: 4.296875vw;
   color: white;
@@ -169,7 +178,7 @@ body {
   line-height: 2.03125vw;
 }
 .left-card__price--month {
-  font-size: 0.9375vw;
+  font-size: 0.8375vw;
   font-weight: 400;
   line-height: 0.9375vw;
 }
@@ -181,6 +190,7 @@ body {
   background-color: pink;
   background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
   font-size: 1.40625vw;
+  font-family: "MTS Sans";
   font-weight: 400;
   color: white;
   text-align: center;
@@ -423,9 +433,13 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #301878;
+  background-image: url("./purple.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .right-card__logo {
-  width: 18.36875vw;
+  width: 22.5vw;
   margin-bottom: 0.8375vw;
 }
 .right-card__price {
@@ -473,6 +487,7 @@ body {
   margin-bottom: 3.125vw;
   background-color: pink;
   background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
+  font-family: "MTS Sans";
   font-size: 1.40625vw;
   font-weight: 400;
   color: white;
