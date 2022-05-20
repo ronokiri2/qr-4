@@ -1,4 +1,6 @@
 'use strict';
+gsap.registerPlugin(Draggable, InertiaPlugin);
+
 // также перемещать и видео превью
 let vw = (coef) => {
 	return window.innerWidth * (coef/100);
@@ -119,6 +121,34 @@ rightCard.addEventListener("click", () => {
 		duration: 0.7,
 	})
 
+	// настройки QR кода для правой карточки
+	const qrCode = new QRCodeStyling({
+		width: vw(23.4375),
+		height: vw(23.4375),
+		type: "canvas",
+		data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
+
+		dotsOptions: {
+			color: "#FFFFFF",
+			type: "rounded"
+		},
+		cornersSquareOptions: {
+			color: "#FFFFFF",
+			type: "extra-rounded"
+		},
+		cornersDotOptions: {
+			color: "#FFFFFF",
+			// type: "rounded"
+		},
+		backgroundOptions: {
+			color: "transparent",
+		},
+		imageOptions: {
+			crossOrigin: "anonymous",
+			margin: 0
+		}
+	});
+
 	qrCode.append(qrRight);
 
 	window.addEventListener('resize', function(){
@@ -171,6 +201,11 @@ returnRight.addEventListener("click", () => {
 		scale: 0.7,
 		duration: 0.7,
 	})
+	
+	let qrCanvasRight = qrRight.querySelector("canvas");
+	setInterval(function(){ 
+		qrCanvasRight.remove()
+	}, 500);
 	
 })
 
@@ -232,3 +267,10 @@ let inactivityTime = function () {
   };
   inactivityTime();
   console.log('Please wait...');
+
+
+
+
+
+//   Draggable.create(".right-description__group", {type:"x,y", edgeResistance:0.65, bounds:".right-description", inertia:true});
+

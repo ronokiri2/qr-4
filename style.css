@@ -533,12 +533,13 @@ body {
   height: 100vh;
   padding-left: 1.5625vw;
   padding-right: 1.5625vw;
+  background: linear-gradient(231.88deg, #0F034B 0%, #050118 100%);
 }
 .right-description {
   width: 57.5vw;
   height: 50.9375vw;
-  background-color: grey;
-  background: linear-gradient(231.88deg, #0F034B 0%, #050118 100%), #ECECEC;
+  background-color: #1B0164;
+  background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,10 +637,8 @@ body {
           align-items: center;
   width: 37.8125vw;
   height: 37.8125vw;
-  background-color: #F0F1F5;
+  background: linear-gradient(326.89deg, rgba(14, 1, 56, 0.3) 0%, rgba(27, 1, 100, 0.3) 100%), #1B0164;
   border-radius: 0.78125vw;
-  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
-          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .right2__qr canvas {
   margin-bottom: 2.421875vw;
@@ -649,6 +648,7 @@ body {
   font-weight: 700;
   line-height: 140%;
   width: 31.5625vw;
+  color: white;
 }
 .right2__qr--link {
   font-size: 1.40625vw;
@@ -656,6 +656,7 @@ body {
   line-height: 140%;
   width: 31.5625vw;
   margin-bottom: 3.125vw;
+  color: white;
 }
 .right2__return {
   display: -webkit-box;
@@ -671,18 +672,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #F0F1F5;
+  background: linear-gradient(326.89deg, rgba(14, 1, 56, 0.3) 0%, rgba(27, 1, 100, 0.3) 100%), #1B0164;
   border-radius: 0.78125vw;
   width: 37.8125vw;
   height: 11.5625vw;
-  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
-          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .right2__return--back {
   font-size: 2.65625vw;
   font-weight: 700;
   line-height: 140%;
   width: 31.5625vw;
+  color: white;
 }
 .right2__return--bottom {
   display: -webkit-box;
@@ -699,6 +699,7 @@ body {
   font-weight: 400;
   line-height: 140%;
   margin-right: 1.40625vw;
+  color: white;
 }
 .right2__return--bottom--img {
   width: 13.2671875vw;
