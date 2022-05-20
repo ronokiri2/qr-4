@@ -206,8 +206,19 @@ returnRight.addEventListener("click", () => {
 	setInterval(function(){ 
 		qrCanvasRight.remove()
 	}, 500);
-	
-})
+
+
+	// сброс перемещений draggable
+	// без i будет работать только 1 раз
+	// setinterval для задержки
+	let i = 0;
+	setInterval(function(){ 
+		if (i < 1) {
+			gsap.set(".right-description__group", {clearProps:"all"});
+			i += 1;
+		}
+	}, 500);
+});
 
 
 
@@ -272,5 +283,26 @@ let inactivityTime = function () {
 
 
 
-//   Draggable.create(".right-description__group", {type:"x,y", edgeResistance:0.65, bounds:".right-description", inertia:true});
+  Draggable.create(".right-description__group", {
+	  type:"x,y", 
+	  edgeResistance:0.7, 
+	  bounds:".right-description, .right-description__text", 
+	  inertia:true,
+	  throwProps:true,
+	  onDrag:adjustOpacity,
+	  onThrowUpdate:adjustOpacity
+	});
 
+  function adjustOpacity() {
+	var distanceFromMaxX = this.x - this.maxX,
+		distanceFromMinX = this.minX - this.x,
+		distanceFromMaxY = this.y - this.maxY,
+		distanceFromMinY = this.minY - this.y,
+		opacityRange = 100,
+		furthestDistance = Math.max(distanceFromMaxX, distanceFromMinX, distanceFromMaxY, distanceFromMinY),
+		opacity = 1;
+	  if (furthestDistance > 0) {
+		opacity = 1 - (Math.min(furthestDistance, opacityRange) / opacityRange);
+	  }
+	  TweenLite.set(this.target, {opacity:opacity});
+  }
