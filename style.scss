@@ -168,43 +168,21 @@ body {
 	top: -100vh;
 	top: 0;
 	left: 0;
-	transform: scale(0.5);
 	transform: scale(0);
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	// flex-direction: row;
-	// justify-content: space-between;
-	// align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	padding-left: 1.5625vw;
 	padding-right: 1.5625vw;
 
-	&-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: auto;
-	}
-
-	&-logo {
-		// position: absolute;
-		// top: 1.796875vw;
-		// left: 1.5625vw;
-		margin-top: auto;
-		margin-bottom: auto;
-		// width: 10.80625vw;
-		height: min(3.90625vw, 100vh - 55.9375vw);
-		align-self: flex-start;
-	}
-	
 	&-description {
 		width: 57.5vw; //736px
 		height: 50.9375vw; //652px
 		background-color: grey;
-		background:  linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
+		background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -268,8 +246,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 50.9375vw;
-	
+	height: 50.9375vw;	
 
 	&__qr {
 	display: flex;
@@ -279,8 +256,8 @@ body {
 	width: 37.8125vw; //484px
 	height: 37.8125vw; //484px
 	background-color:#F0F1F5;
+	background: linear-gradient(329.78deg, rgba(186, 190, 204, 0.3) 0%, rgba(240, 241, 245, 0.3) 100%);
 	border-radius: 0.78125vw;
-	box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 
 		canvas {
 			margin-bottom: 2.421875vw;
@@ -308,10 +285,10 @@ body {
 		justify-content: center;
 		align-items: center;
 		background-color: #F0F1F5;
+		background: linear-gradient(329.78deg, rgba(186, 190, 204, 0.3) 0%, rgba(240, 241, 245, 0.3) 100%);
 		border-radius: 0.78125vw;
 		width: 37.8125vw; //484px
-		height: 11.5625vw;//148
-		box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
+		height: 11.5625vw; //148
 
 		&--back {
 			font-size: 2.65625vw; //34px

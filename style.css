@@ -202,26 +202,8 @@ body {
   top: -100vh;
   top: 0;
   left: 0;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
   -webkit-transform: scale(0);
           transform: scale(0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  padding-left: 1.5625vw;
-  padding-right: 1.5625vw;
-}
-.left-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,20 +217,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: auto;
-}
-.left-logo {
-  margin-top: auto;
-  margin-bottom: auto;
-  height: min(3.90625vw, 100vh - 55.9375vw);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 1.5625vw;
+  padding-right: 1.5625vw;
 }
 .left-description {
   width: 57.5vw;
   height: 50.9375vw;
   background-color: grey;
-  background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
+  background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,9 +326,8 @@ body {
   width: 37.8125vw;
   height: 37.8125vw;
   background-color: #F0F1F5;
+  background: linear-gradient(329.78deg, rgba(186, 190, 204, 0.3) 0%, rgba(240, 241, 245, 0.3) 100%);
   border-radius: 0.78125vw;
-  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
-          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .left2__qr canvas {
   margin-bottom: 2.421875vw;
@@ -383,11 +360,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F0F1F5;
+  background: linear-gradient(329.78deg, rgba(186, 190, 204, 0.3) 0%, rgba(240, 241, 245, 0.3) 100%);
   border-radius: 0.78125vw;
   width: 37.8125vw;
   height: 11.5625vw;
-  -webkit-box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
-          box-shadow: -7px -7px 30px #FFFFFF, 5px 5px 20px #BABECC;
 }
 .left2__return--back {
   font-size: 2.65625vw;
