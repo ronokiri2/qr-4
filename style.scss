@@ -150,7 +150,7 @@ body {
 	&__button {
 		width: 20.9375vw; //268px
 		height: 4.375vw; // 56px
-		border-radius: 0.3125vw; // 4px
+		border-radius: 2.34375vw; // 30px
 		margin-bottom: 3.125vw; // 40px
 		background-color:pink;
 		background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
@@ -163,9 +163,7 @@ body {
 }
 
 .left {
-	will-change: transform;
 	position: absolute;
-	top: -100vh;
 	top: 0;
 	left: 0;
 	transform: scale(0);
@@ -180,73 +178,82 @@ body {
 
 	&-description {
 		width: 57.5vw; //736px
-		height: 50.9375vw; //652px
+		height: 53.75vw; //688px
 		background-color: grey;
 		background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%);
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: flex-start;
+		align-items: center;
 		border-radius: 0.78125vw;
-		padding-left: 3.125vw;
-		padding-right: 3.125vw;
 
-		&__group {
-			will-change: transform;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
-			width: 49.453125vw;
-			margin-bottom: 0.625vw; //8px
-	
-			&--title {
-				will-change: transform;
-				font-size: 2.65625vw;
-				font-weight: 700;
-				line-height: 140%;
-				margin-right: 1.328125vw;
-			}
-	
-			&--30days {
-				will-change: transform;
-				width: 16.5625vw;
-				height: 3.125vw;
-				line-height: 3.125vw;
-				border-radius: 1.5625vw;
-				text-align: center;
-				vertical-align: middle;
-				background-color: pink;
-				background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #C4C4C4;
-				color: white;
-				font-size: 1.40625vw; //18px
-				font-weight: 400;
-				margin-right: 1.5625vw;//20px
-			}
-	
-			&--dalee149rub {
-				will-change: transform;
-				font-size: 1.40625vw;
-				font-weight: 400;
-				line-height: 140%;
-			}
+		&__logo {
+			width: 15.7382812vw;
+			margin-top: 2.34375vw;
 		}
+
 		&__text {
-			will-change: transform;
-			width: 49.453125vw;
+			width: 44.84375vw;
 			font-size: 1.40625vw;
 			font-weight: 400;
 			line-height: 140%;
-			margin-bottom: 3.28125vw; //42px
+			margin-top: 1.5625vw; //20px
+			height: 5.859375vw;
+			text-align: center;
 		}
+
+		&__30days {
+			width: 16.5625vw;
+			height: 3.125vw;
+			line-height: 3.125vw;
+			border-radius: 1.5625vw;
+			text-align: center;
+			vertical-align: middle;
+			background-color: pink;
+			background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #C4C4C4;
+			color: white;
+			font-size: 1.40625vw; //18px
+			font-weight: 400;
+			margin-top: 1.09375vw; //14px
+
+			span {
+				font-size: 1.09375vw; //14px
+			}
+		}
+
+		&__draggable {
+			height: 28.828125vw;
+		}
+
+		&__text2 {
+			width: 38.28125vw;
+			font-size: 1.09375vw; //14px
+			font-weight: 400;
+			line-height: 140%;
+			margin-top: 1.5625vw; //20px
+			text-align: center;
+		}
+
+		&__dalee149rub {
+			font-size: 1.09375vw;
+			font-weight: 400;
+			line-height: 140%;
+			margin-top: 0.15625vw;
+			margin-right: 0.78125vw;
+			color: #141414;
+			opacity: 0.5;
+			align-self: flex-end;
+		}
+
 	}
-
-
+	
 }
+
 .left2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 50.9375vw;	
+	height: 53.75vw; //688px
 
 	&__qr {
 	display: flex;
@@ -254,7 +261,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	width: 37.8125vw; //484px
-	height: 37.8125vw; //484px
+	height: 40.62500vw; //520px
 	background-color:#F0F1F5;
 	background: linear-gradient(329.78deg, rgba(186, 190, 204, 0.3) 0%, rgba(240, 241, 245, 0.3) 100%);
 	border-radius: 0.78125vw;
@@ -376,7 +383,7 @@ body {
 	&__button {
 		width: 20.9375vw; //268px
 		height: 4.375vw; // 56px
-		border-radius: 0.3125vw; // 4px
+		border-radius: 2.34375vw; // 30px
 		margin-bottom: 3.125vw; // 40px
 		background-color:pink;
 		background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
@@ -387,21 +394,6 @@ body {
 		text-align: center;
 	}
 }
-
-
-.description {
-	width: 20vw;
-	height: 20vw;
-	background-color:grey;
-}
-.instruction {
-	width: 20vw;
-	height: 20vw;
-	background-color:grey;
-}
-
-
-
 
 .right {
 	will-change: transform;
@@ -569,13 +561,8 @@ body {
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
-	// overflow: hidden;
 	z-index: 2;
 	background-color: #E5E5E5;
-	// transform: translateY(100vh);
-	// &__relative {
-	// 	position: relative;
-	// }
 
 	&__video {
 		filter: brightness(0.7);
@@ -610,12 +597,13 @@ body {
 		&--button {
 			width: 22vw;
 			height: 4.37500vw;
+			font-family: 'MTS Sans';
 			font-size: 1.40625vw;
 			font-weight: 400;
 			background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
 			text-align: center;
 			color: white;
-			border-radius: 0.3125vw;
+			border-radius: 2.34375vw;
 		}
 	}
 }
