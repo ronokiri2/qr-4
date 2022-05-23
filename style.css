@@ -27,9 +27,14 @@ html {
   -webkit-tap-highlight-color: transparent;
   position: relative;
   background: linear-gradient(68.66deg, #EBECF0 0%, #FFFFFF 100%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +259,7 @@ body {
   text-align: center;
 }
 .left-description__30days {
-  width: 16.5625vw;
+  width: 16.71875vw;
   height: 3.125vw;
   line-height: 3.125vw;
   border-radius: 1.5625vw;
