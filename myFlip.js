@@ -226,7 +226,7 @@ returnRight.addEventListener("click", () => {
 	let i = 0;
 	setInterval(function(){ 
 		if (i < 1) {
-			gsap.set(".drag", {clearProps:"all"});
+			gsap.set(".dragRight", {clearProps:"all"});
 			i += 1;
 		}
 	}, 500);
