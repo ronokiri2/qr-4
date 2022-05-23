@@ -732,7 +732,8 @@ body {
   width: 57.5vw;
   height: 53.75vw;
   background-color: #1B0164;
-  background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
+  background-image: url("./images/blob2.svg");
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -624,7 +624,9 @@ body {
 		width: 57.5vw; //736px
 		height: 53.75vw; //688px
 		background-color: #1B0164;
-		background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
+		// background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
+		background-image: url("./images/blob2.svg");
+		background-position: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
