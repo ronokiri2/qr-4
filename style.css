@@ -23,7 +23,7 @@
   src: url("./fonts/MTSSans-Regular__W.woff2");
 }
 html {
-  font-family: "Hero New", system-ui, sans-serif;
+  font-family: "Hero New", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
   position: relative;
   background: linear-gradient(68.66deg, #EBECF0 0%, #FFFFFF 100%);
