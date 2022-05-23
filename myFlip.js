@@ -283,26 +283,26 @@ let inactivityTime = function () {
 
 
 
-  Draggable.create(".right-description__group", {
-	  type:"x,y", 
-	  edgeResistance:0.7, 
-	  bounds:".right-description, .right-description__text", 
-	  inertia:true,
-	  throwProps:true,
-	  onDrag:adjustOpacity,
-	  onThrowUpdate:adjustOpacity
-	});
+Draggable.create(".drag", {
+	type:"x,y", 
+	edgeResistance:0.7, 
+	bounds:".left-description", 
+	inertia:true,
+	throwProps:true,
+	// onDrag:adjustOpacity,
+	// onThrowUpdate:adjustOpacity
+});
 
-  function adjustOpacity() {
-	var distanceFromMaxX = this.x - this.maxX,
-		distanceFromMinX = this.minX - this.x,
-		distanceFromMaxY = this.y - this.maxY,
-		distanceFromMinY = this.minY - this.y,
-		opacityRange = 100,
-		furthestDistance = Math.max(distanceFromMaxX, distanceFromMinX, distanceFromMaxY, distanceFromMinY),
-		opacity = 1;
-	  if (furthestDistance > 0) {
-		opacity = 1 - (Math.min(furthestDistance, opacityRange) / opacityRange);
-	  }
-	  TweenLite.set(this.target, {opacity:opacity});
-  }
+// function adjustOpacity() {
+// var distanceFromMaxX = this.x - this.maxX,
+// 	distanceFromMinX = this.minX - this.x,
+// 	distanceFromMaxY = this.y - this.maxY,
+// 	distanceFromMinY = this.minY - this.y,
+// 	opacityRange = 100,
+// 	furthestDistance = Math.max(distanceFromMaxX, distanceFromMinX, distanceFromMaxY, distanceFromMinY),
+// 	opacity = 1;
+// 	if (furthestDistance > 0) {
+// 	opacity = 1 - (Math.min(furthestDistance, opacityRange) / opacityRange);
+// 	}
+// 	TweenLite.set(this.target, {opacity:opacity});
+// }
