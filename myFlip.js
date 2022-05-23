@@ -182,6 +182,18 @@ returnLeft.addEventListener("click", () => {
 		scale: 0.7,
 		duration: 0.7,
 	})
+
+
+	// сброс перемещений draggable
+	// без i будет работать только 1 раз
+	// setinterval для задержки
+	let i = 0;
+	setInterval(function(){ 
+		if (i < 1) {
+			gsap.set(".drag", {clearProps:"all"});
+			i += 1;
+		}
+	}, 500);
 })
 
 returnRight.addEventListener("click", () => {
@@ -214,7 +226,7 @@ returnRight.addEventListener("click", () => {
 	let i = 0;
 	setInterval(function(){ 
 		if (i < 1) {
-			gsap.set(".right-description__group", {clearProps:"all"});
+			gsap.set(".drag", {clearProps:"all"});
 			i += 1;
 		}
 	}, 500);
