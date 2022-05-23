@@ -54,36 +54,9 @@ body {
 	width: 100vw;
 	padding-left: 1.5625vw;
 	padding-right: 1.5625vw;
-	height: 100vh; 
+	height: 100vh;
 	// overflow: hidden;
 	position: relative;
-
-	&__left {
-		width: 47.65625vw; //610
-		height: 100%;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		
-		&.active {
-			width: 57.5vw; //736
-		}
-	}
-
-	&__right {
-		width: 47.65625vw; //610
-		height: 100%;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-
-		&.active {
-			width: 37.8125vw; //484
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-	}
 }
 
 .left-card {
@@ -179,6 +152,7 @@ body {
 	&-description {
 		width: 57.5vw; //736px
 		height: 53.75vw; //688px
+		max-height: 99vh;
 		background-color: grey;
 		background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%);
 		display: flex;
@@ -458,6 +432,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 53.75vw; //688px
+	max-height: 99vh;
 
 	&__qr {
 	display: flex;
@@ -602,10 +577,8 @@ body {
 .right {
 	will-change: transform;
 	position: absolute;
-	top: 100vh;
 	top: 0;
 	left: 0;
-	transform: scale(0.5);
 	transform: scale(0);
 	display: flex;
 	flex-direction: row;
@@ -621,6 +594,7 @@ body {
 	&-description {
 		width: 57.5vw; //736px
 		height: 53.75vw; //688px
+		max-height: 99vh;
 		background-color: #1B0164;
 		// background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
 		background-image: url("./images/blob3.svg");
@@ -786,6 +760,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 53.75vw;
+	max-height: 99vh;
 
 	&__qr {
 	display: flex;
@@ -878,6 +853,7 @@ body {
 		margin: auto;
 		width: 91.09375vw;
 		// height: 52.8125vw;
+		max-height: 90vh;
 		border-radius: 0.78125vw;
 	}
 
