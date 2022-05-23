@@ -305,6 +305,16 @@ Draggable.create(".drag", {
 	// onThrowUpdate:adjustOpacity
 });
 
+Draggable.create(".dragRight", {
+	type:"x,y", 
+	edgeResistance:0.7, 
+	bounds:".right-description", 
+	inertia:true,
+	throwProps:true,
+	// onDrag:adjustOpacity,
+	// onThrowUpdate:adjustOpacity
+});
+
 // function adjustOpacity() {
 // var distanceFromMaxX = this.x - this.maxX,
 // 	distanceFromMinX = this.minX - this.x,
@@ -314,7 +324,7 @@ Draggable.create(".drag", {
 // 	furthestDistance = Math.max(distanceFromMaxX, distanceFromMinX, distanceFromMaxY, distanceFromMinY),
 // 	opacity = 1;
 // 	if (furthestDistance > 0) {
-// 	opacity = 1 - (Math.min(furthestDistance, opacityRange) / opacityRange);
+// 	opacity = 1.05 - (Math.min(furthestDistance, opacityRange) / opacityRange);
 // 	}
 // 	TweenLite.set(this.target, {opacity:opacity});
 // }
