@@ -625,8 +625,10 @@ body {
 		height: 53.75vw; //688px
 		background-color: #1B0164;
 		// background: linear-gradient(228.85deg, #1B0164 0%, #0E0138 100%);
-		background-image: url("./images/blob2.svg");
+		background-image: url("./images/blob3.svg");
 		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 150% 150%;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -752,7 +754,7 @@ body {
 				right: 188px;
 				z-index: 6;
 				object-fit: cover;
-				background-color: #E4E6EC;
+				background-color: white;
 				padding: 0.8vw;
 			}
 		}

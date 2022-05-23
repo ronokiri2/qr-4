@@ -8,6 +8,10 @@ let vw = (coef) => {
 let vh = (coef) => window.innerHeight * (coef/100);
 
 
+let input = prompt("Введите номер салона сотовой связи")
+// let input = '6';
+console.log(input);
+
 // наверное, не работает
 window.addEventListener('resize', function(){
 	vw = (coef) => window.innerWidth * (coef/100);
@@ -17,9 +21,7 @@ window.addEventListener('deviceorientation', function(){
 	vw = (coef) => window.innerWidth * (coef/100);
 	vh = (coef) => window.innerHeight * (coef/100);
 });
-//
 
-console.log(vw(100))
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
 
@@ -231,12 +233,6 @@ returnRight.addEventListener("click", () => {
 		}
 	}, 500);
 });
-
-
-
-// let input = prompt("Введите номер салона сотовой связи")
-let input = '6';
-console.log(input);
 
 
 // настройки QR кода

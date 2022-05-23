@@ -732,8 +732,10 @@ body {
   width: 57.5vw;
   height: 53.75vw;
   background-color: #1B0164;
-  background-image: url("./images/blob2.svg");
+  background-image: url("./images/blob3.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,7 +875,7 @@ body {
   z-index: 6;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #E4E6EC;
+  background-color: white;
   padding: 0.8vw;
 }
 .right-description__text2 {
