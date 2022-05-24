@@ -51,6 +51,7 @@ body {
 }
 
 .container {
+  will-change: transform;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,6 +159,7 @@ body {
 }
 
 .left {
+  will-change: transform;
   position: absolute;
   top: 0;
   left: 0;
@@ -956,6 +958,7 @@ body {
 }
 
 .preview {
+  will-change: transform;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
