@@ -1,4 +1,5 @@
-console.clear();
+'use strict';
+gsap.registerPlugin(Draggable, InertiaPlugin);
 
 var slideDelay = 1.5;
 var slideDuration = 1;
@@ -25,9 +26,9 @@ var draggable = new Draggable(proxy, {
     timer.pause();
     updateProgress();
   },
-//   snap: {
-//     y: value => gsap.utils.snap(slideWidth, value)
-//   },
+  snap: {
+    y: value => gsap.utils.snap(slideWidth, value)
+  },
   onDrag: updateProgress,
   onThrowUpdate: updateProgress,
   onThrowComplete: function() {
