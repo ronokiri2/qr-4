@@ -334,7 +334,7 @@ var slideDuration = 1;
 var slides = document.querySelectorAll(".slide");
 var numSlides = slides.length;
 
-gsap.set(slides, { yPercent: i => i * 100 });
+gsap.set(slides, { xPercent: i => i * 100 });
 
 var wrap = gsap.utils.wrap(-100, (numSlides - 1) * 100);
 var wrapProgress = gsap.utils.wrap(0, 1);
@@ -347,7 +347,7 @@ resize();
 
 var draggable = new Draggable(proxy, {
   trigger: ".slides-container",
-  type: "y",
+  type: "x",
   inertia: true,
   onPressInit: function() {
     animation.pause();
@@ -355,7 +355,7 @@ var draggable = new Draggable(proxy, {
     updateProgress();
   },
   snap: {
-    y: value => gsap.utils.snap(slideWidth, value)
+    x: value => gsap.utils.snap(slideWidth, value)
   },
   onDrag: updateProgress,
   onThrowUpdate: updateProgress,
@@ -387,7 +387,7 @@ function autoPlay() {
 }
 
 function updateProgress() {  
-  animation.progress(wrapProgress(gsap.getProperty(proxy, "y") / wrapWidth));
+  animation.progress(wrapProgress(gsap.getProperty(proxy, "x") / wrapWidth));
 }
 
 function resize() {
@@ -397,13 +397,13 @@ function resize() {
   
   animation.progress(0).clear().to(slides, {
     duration: 100,
-    yPercent: "+=" + (numSlides * 100),
+    xPercent: "+=" + (numSlides * 100),
     ease: "none",
     modifiers: {
-      yPercent: wrap
+      xPercent: wrap
     }
   })
-  .to(proxy, {y: wrapWidth, duration: 100, ease: "none"}, 0)
+  .to(proxy, {x: wrapWidth, duration: 100, ease: "none"}, 0)
   .progress(progress);
 }
 

@@ -970,11 +970,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100vw;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 500vw;
   height: 100vh;
   z-index: 2;
   background-color: #E5E5E5;
