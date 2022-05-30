@@ -22,9 +22,9 @@
 
 
 
-// ::selection {
-// 	background-color: transparent;
-// }
+::selection {
+	background-color: transparent;
+}
 
 html {
 	font-family: 'Hero New', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", system-ui, sans-serif;
@@ -843,54 +843,206 @@ body {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	z-index: 2;
 	background-color: #E5E5E5;
 
-	&__video {
-		filter: brightness(0.7);
-		position: absolute;
-		margin: auto;
-		width: 91.09375vw;
-		// height: 52.8125vw;
-		max-height: 90vh;
-		border-radius: 0.78125vw;
-	}
-
-	&__content {
+	.slides-container {
+		position: relative;
+		overflow: hidden;
 		display: flex;
-		flex-direction: column;
+		flex: 1;
+	}
+	
+	.slides-inner {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+	
+	.slide {
+		position: absolute;
+		background-color: white;
+		font-size: 90px;
+		font-weight: 700;
+		color: rgba(255, 255, 255, 0.9);
+		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
+		height: 100%;
+		width: 100vw;
+	}
+	
+	.preview-button {
+		position: absolute;
+		width:  22.890625vw;
+		height: 4.375vw;
+		bottom: 7.5vh;
+		left: 50%;
+		transform: translateX(-50%);
 		z-index: 3;
-		// margin-top: 25.15625vw;
-		height: 41.87500vw;
+		background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
+		border-radius: 2.34375vw;
+		border: 0;
+		color: white;
+		font-family: 'MTS Sans';
+		font-weight: 400;
+		font-size: 1.40625vw;
+		text-align: center;
+		user-select: auto;
+		cursor: pointer;
+	}
+	
+	.slide1 {
+	
+		&__video {
+			width: 96.875%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
+		}
+	}
+	
+	.slide2 {
+		padding: 1.5625vw;
+		justify-content: space-between;
+	
+		&__left {
+			width: 57.5vw;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
+		}
+		&__right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 1.5vw;
+			width: 37.8125vw;
+			height: 100%;
+	
+			&--top {
+				width: 100%;
+				height: auto;
+				flex-grow: 1;
+	
+				&__video{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 0.78125vw;
+				}
+			}
+			&--bottom {
+				width: 100%;
+				height: 46.25%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+	
+				&__circle {
+					width: min(100%, 46.25vh);
+					max-height: 100%;
+					max-width: 100%;
+					aspect-ratio: 1;
+					background-color: black;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 
-		&--logo {
-			width: 28.59375vw;
-			margin-bottom: 3.203125vw;
+					&--logo {
+						width: 19.48125vw;
+					}
+				}
+			}
 		}
-		&--h2 {
-			font-size: 1.5625vw;
-			font-weight: 700;
-			width: 66.40625vw;
-			color: white;
-			margin-bottom: 5.46875vw;
-			text-align: center;
+	}
+	
+	.slide3 {
+		padding: 0 1.5625vw;
+		justify-content: space-between;
+	
+		&__left {
+			width: 47.65625vw;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
 		}
-		&--button {
-			width: 22vw;
-			height: 4.37500vw;
-			font-family: 'MTS Sans';
-			font-size: 1.40625vw;
-			font-weight: 400;
-			background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-			text-align: center;
-			color: white;
-			border-radius: 2.34375vw;
+		&__right {
+			width: 47.65625vw;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
+		}
+	}
+	
+	.slide4 {
+		padding: 1.5625vw 1.5625vw 0 1.5625vw;
+		justify-content: space-between;
+	
+		&__left {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 1.5vw;
+			width: 37.8125vw;
+			height: 100%;
+	
+			&--top {
+				width: 100%;
+				height: auto;
+				flex-grow: 1;
+	
+				&__video{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 0.78125vw;
+				}
+			}
+			&--bottom {
+				width: 100%;
+				height: 46.25%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+	
+				&__circle {
+					width: min(100%, 46.25vh);
+					max-height: 100%;
+					max-width: 100%;
+					aspect-ratio: 1;
+					background-color: black;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					&--logo {
+						width: 19.48125vw;
+					}
+				}
+			}
+		}
+		&__right {
+			width: 57.5vw;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
+		}
+	}
+	
+	.slide5 {
+		padding: 1.5625vw;
+	
+		&__video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0.78125vw;
 		}
 	}
 }

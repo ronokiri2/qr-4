@@ -125,23 +125,74 @@
 	</section>
 
 	<section class="preview">
-		<video class="preview__video" autoplay muted loop>
-			<source src="./KIONAV1.mp4" type="video/mp4; codecs=av01.0.08M.08">
-			<source src="./KIONVP9.webm" type="video/webm; codecs=vp9">
-			<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
-		</video>
+		<div class="slides-container">
+			<button class="preview-button">Подробнее о подписке</button>
+			<div class="slides-inner">
+				<div class="slide a slide1">
+					<video class="slide1__video" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+				</div>
 
-		<div class="preview__content">
-			<img class="preview__content--logo" src="./images/OKKION.svg">
-			<h2 class="preview__content--h2">KION — это онлайн-кинотеатр, который вы полюбите. В KION можно смотреть фильмы и сериалы лучших российских и зарубежных студий.</h2>
-			<button class="preview__content--button">Нажмите за подробностями</button>
+				<div class="slide b slide2">
+					<video class="slide2__left" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+					<div class="slide2__right">
+						<div class="slide2__right--top">
+							<video class="slide2__right--top__video" autoplay muted loop>
+								<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+							</video>
+						</div>
+						<div class="slide2__right--bottom">
+							<div class="slide2__right--bottom__circle">
+								<img class="slide2__right--bottom__circle--logo" src="./images/online.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide a slide3">
+					<video class="slide3__left" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+					<video class="slide3__right" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+				</div>
+
+				<div class="slide b slide4">
+					<div class="slide4__left">
+						<div class="slide4__left--top">
+							<video class="slide4__left--top__video" autoplay muted loop>
+								<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+							</video>
+						</div>
+						<div class="slide4__left--bottom">
+							<div class="slide4__left--bottom__circle">
+								<img class="slide2__right--bottom__circle--logo" src="./images/online.svg">
+							</div>
+						</div>
+					</div>
+					<video class="slide4__right" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+				</div>
+
+				<div class="slide a slide5">
+					<video class="slide5__video" autoplay muted loop>
+						<source src="./KION264.mp4" type="video/mp4; codecs=avc1.640028">
+					</video>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<script  src="./gsap.min.js"></script>
+	<script src="./gsap.min.js"></script>
 	<script src="./qr.min.js"></script>
 	<script src="./draggable.js"></script>
 	<script src="./inertiaPlugin.js"></script>
 	<script src="./myFlip.js"></script>
+	<script src="./preview.js"></script>
 </body>
 </html>

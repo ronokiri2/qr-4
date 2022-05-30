@@ -39,6 +39,7 @@ let qrRight = document.querySelector(".right2__qr");
 
 
 const preview = document.querySelector(".preview");
+const previewButton = document.querySelector(".preview-button");
 const leftText = document.querySelector(".left-description__text");
 
 
@@ -63,7 +64,7 @@ leftText.addEventListener("click", () => {
 		opacity: 1
 	});
 })
-preview.addEventListener("click", () => {
+previewButton.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 0.7, 
 		scale: 0.7,
