@@ -57,8 +57,11 @@ body {
 
 	&__logo {
 		width: 18.3328125vw;
-		margin-top: 0;
-		margin-bottom: 5.115625vw;
+		margin: auto;
+
+		&--bottom {
+			margin: auto;
+		}
 	}
 
 	&__imgs {
@@ -315,9 +318,6 @@ body {
 		
 	}
 
-	&__logo--bottom {
-		margin-top: 0;
-	}
 }
 
 

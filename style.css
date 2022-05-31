@@ -78,8 +78,10 @@ body {
 }
 .pick__logo {
   width: 18.3328125vw;
-  margin-top: 0;
-  margin-bottom: 5.115625vw;
+  margin: auto;
+}
+.pick__logo--bottom {
+  margin: auto;
 }
 .pick__imgs {
   width: 54.6875vw;
@@ -376,9 +378,6 @@ body {
 .pick__buttons--right__price--ruble {
   font-size: 2.03125vw;
   line-height: 2.03125vw;
-}
-.pick__logo--bottom {
-  margin-top: 0;
 }
 
 .left {
