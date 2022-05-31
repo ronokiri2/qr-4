@@ -111,45 +111,6 @@ body {
   border-radius: 0.78125vw;
   z-index: 2;
 }
-.pick__imgs--imgC {
-  position: absolute;
-  top: 6.796875vw;
-  left: 50%;
-  width: 20.15625vw;
-  height: 27.109375vw;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 1.4vw;
-  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
-}
-.pick__imgs--imgCB {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  border-radius: 1.4vw 1.4vw 0 0;
-  z-index: 6;
-  background-color: white;
-}
-.pick__imgs--imgCC {
-  width: 18.359375vw;
-  height: 25.546875vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 0.78125vw;
-  z-index: 7;
-}
 .pick__imgs--imgD {
   position: absolute;
   top: 10.1296875vw;
@@ -316,6 +277,45 @@ body {
 .pick__buttons--left__price--ruble {
   font-size: 2.03125vw;
   line-height: 2.03125vw;
+}
+.pick__buttons--img {
+  position: absolute;
+  bottom: 6.484375vw;
+  left: 50%;
+  width: 20.15625vw;
+  height: 27.109375vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.4vw;
+  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
+}
+.pick__buttons--img__white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  border-radius: 1.4vw 1.4vw 0 0;
+  z-index: 6;
+  background-color: white;
+}
+.pick__buttons--imgC {
+  width: 18.359375vw;
+  height: 25.546875vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.78125vw;
+  z-index: 7;
 }
 .pick__buttons--right {
   width: 20.9375vw;
