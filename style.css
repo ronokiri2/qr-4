@@ -66,9 +66,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -78,7 +78,7 @@ body {
 }
 .pick__logo {
   width: 18.3328125vw;
-  margin-top: 4.55859375vw;
+  margin-top: 0;
   margin-bottom: 5.115625vw;
 }
 .pick__imgs {
@@ -378,91 +378,7 @@ body {
   line-height: 2.03125vw;
 }
 .pick__logo--bottom {
-  margin-top: 5.078125vw;
-}
-
-.left-card {
-  width: 31.25vw;
-  height: 31.25vw;
-  border-radius: 0.78125vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: grey;
-  background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
-  background-image: url("./images/grey.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 1.5625vw;
-}
-.left-card.active {
-  width: 80vw;
-}
-.left-card__logo {
-  width: 18.36875vw;
-  margin-bottom: 1.1vw;
-}
-.left-card__price {
-  margin-bottom: 4.6vw;
-  font-size: 3.6vw;
-  font-weight: 800;
-  line-height: 4.296875vw;
-  color: white;
-  width: 12.890625vw;
-  height: 4.296875vw;
-  background-color: black;
-  background: linear-gradient(85.19deg, #160D37 2.65%, #1B0E64 95.88%);
-  border-radius: 2.1875vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-right: 2.8125vw;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-}
-.left-card__price--number {
-  display: inline;
-}
-.left-card__price--rubleAndMonth {
-  margin-top: -1.3vw;
-}
-.left-card__price--ruble {
-  font-size: 2.03125vw;
-  line-height: 2.03125vw;
-}
-.left-card__price--month {
-  font-size: 0.8375vw;
-  font-weight: 400;
-  line-height: 0.9375vw;
-}
-.left-card__button {
-  width: 20.9375vw;
-  height: 4.375vw;
-  border-radius: 2.34375vw;
-  margin-bottom: 3.125vw;
-  background-color: pink;
-  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-  font-size: 1.40625vw;
-  font-family: "MTS Sans";
-  font-weight: 400;
-  color: white;
-  text-align: center;
+  margin-top: 0;
 }
 
 .left {
@@ -885,85 +801,6 @@ body {
 }
 .left2__return--bottom--img {
   width: 13.2671875vw;
-}
-
-.right-card {
-  width: 31.25vw;
-  height: 31.25vw;
-  border-radius: 0.78125vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: rgb(48, 24, 120);
-  background-image: url("./images/purple.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.right-card__logo {
-  width: 22.5vw;
-  margin-bottom: 0.8375vw;
-}
-.right-card__price {
-  margin-bottom: 4.296875vw;
-  font-size: 3.75vw;
-  font-weight: 800;
-  line-height: 4.296875vw;
-  color: #202020;
-  width: 12.890625vw;
-  height: 4.296875vw;
-  background-color: black;
-  background: linear-gradient(93.71deg, #FFFFFF 0.43%, #D5D5D5 100%);
-  border-radius: 2.1875vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-right: 2.8125vw;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-}
-.right-card__price--number {
-  display: inline;
-}
-.right-card__price--rubleAndMonth {
-  margin-top: -1.3vw;
-}
-.right-card__price--ruble {
-  font-size: 2.03125vw;
-  line-height: 2.03125vw;
-}
-.right-card__price--month {
-  font-size: 0.9375vw;
-  font-weight: 400;
-  line-height: 0.9375vw;
-}
-.right-card__button {
-  width: 20.9375vw;
-  height: 4.375vw;
-  border-radius: 2.34375vw;
-  margin-bottom: 3.125vw;
-  background-color: pink;
-  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-  font-family: "MTS Sans";
-  font-size: 1.40625vw;
-  font-weight: 400;
-  color: white;
-  text-align: center;
 }
 
 .right {

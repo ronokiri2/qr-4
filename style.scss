@@ -49,7 +49,7 @@ body {
 	will-change: transform;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
@@ -57,7 +57,7 @@ body {
 
 	&__logo {
 		width: 18.3328125vw;
-		margin-top: 4.55859375vw;
+		margin-top: 0;
 		margin-bottom: 5.115625vw;
 	}
 
@@ -316,85 +316,12 @@ body {
 	}
 
 	&__logo--bottom {
-		margin-top: 5.078125vw;
+		margin-top: 0;
 	}
 }
 
-.left-card {
-	width: 31.25vw; //400px
-	height: 31.25vw; //400px
-	border-radius: 0.78125vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	background-color: grey;
-	background: linear-gradient(231.88deg, #F0F1F5 0%, #BABECC 100%), #ECECEC;
-	background-image: url("./images/grey.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-right: 1.5625vw; //20px
-
-	&.active {
-		width: 80vw; //736
-	}
-
-	&__logo {
-		width: 18.36875vw;
-		margin-bottom: 1.1vw;
-	}
-
-	&__price {
-		margin-bottom: 4.6vw;
-		font-size: 3.6vw;
-		font-weight: 800;
-		line-height: 4.296875vw;
-		color: white;
-		width: 12.890625vw; //165px
-		height: 4.296875vw; //55px
-		background-color: black;
-		background: linear-gradient(85.19deg, #160D37 2.65%, #1B0E64 95.88%);
-		border-radius: 2.1875vw; //28px
-		display: flex;
-		justify-content: center;
-		align-self: flex-end;
-		margin-right: 2.8125vw;
-		transform: rotate(-4deg);
 
 
-		&--number {
-			display: inline;
-		}
-
-		&--rubleAndMonth {
-			margin-top: -1.3vw;
-		}
-		&--ruble {
-			font-size: 2.03125vw; //26px
-			line-height: 2.03125vw;
-		}
-		&--month {
-			font-size: 0.8375vw;
-			font-weight: 400;
-			line-height: 0.9375vw;
-		}
-	}
-
-	&__button {
-		width: 20.9375vw; //268px
-		height: 4.375vw; // 56px
-		border-radius: 2.34375vw; // 30px
-		margin-bottom: 3.125vw; // 40px
-		background-color:pink;
-		background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-		font-size: 1.40625vw;
-		font-family: 'MTS Sans';
-		font-weight: 400;
-		color: white;
-		text-align: center;
-	}
-}
 
 .left {
 	will-change: transform;
@@ -765,76 +692,6 @@ body {
 
 }
 
-.right-card {
-	width: 31.25vw; //400px
-	height: 31.25vw; //400px
-	border-radius: 0.78125vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	background-color: rgb(48, 24, 120);
-	background-image: url("./images/purple.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-
-	&__logo {
-		width: 22.5vw;
-		margin-bottom: 0.8375vw; //11px
-	}
-
-	&__price {
-		margin-bottom: 4.296875vw;
-		font-size: 3.75vw; //48px
-		font-weight: 800;
-		line-height: 4.296875vw;
-		color: #202020;
-		width: 12.890625vw; //165px
-		height: 4.296875vw; //55px
-		background-color: black;
-		background: linear-gradient(93.71deg, #FFFFFF 0.43%, #D5D5D5 100%);
-		border-radius: 2.1875vw; //28px
-		display: flex;
-		justify-content: center;
-		align-self: flex-end;
-		margin-right: 2.8125vw;
-		transform: rotate(-4deg);
-
-
-		&--number {
-			display: inline;
-		}
-
-		&--rubleAndMonth {
-			margin-top: -1.3vw;
-		}
-		&--ruble {
-			font-size: 2.03125vw; //26px
-			line-height: 2.03125vw;
-		}
-		&--month {
-			font-size: 0.9375vw; //12px
-			font-weight: 400;
-			line-height: 0.9375vw;
-		}
-	}
-
-	&__button {
-		width: 20.9375vw; //268px
-		height: 4.375vw; // 56px
-		border-radius: 2.34375vw; // 30px
-		margin-bottom: 3.125vw; // 40px
-		background-color:pink;
-		background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%);
-		font-family: 'MTS Sans';
-		font-size: 1.40625vw;
-		font-weight: 400;
-		color: white;
-		text-align: center;
-	}
-}
 
 .right {
 	will-change: transform;
