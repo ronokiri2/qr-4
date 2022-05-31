@@ -8,8 +8,8 @@ let vw = (coef) => {
 let vh = (coef) => window.innerHeight * (coef/100);
 
 
-let input = prompt("Введите номер салона сотовой связи")
-// let input = '6';
+// let input = prompt("Введите номер салона сотовой связи")
+let input = '6';
 console.log(input);
 
 // наверное, не работает
@@ -23,11 +23,11 @@ window.addEventListener('deviceorientation', function(){
 });
 
 const body = document.querySelector("body");
-const container = document.querySelector(".container");
+const pick = document.querySelector(".pick");
 
 
-const leftCard = document.querySelector(".left-card");
-const rightCard = document.querySelector(".right-card");
+const leftCard = document.querySelector(".pick__buttons--left__button");
+const rightCard = document.querySelector(".pick__buttons--right__button");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 
@@ -48,7 +48,7 @@ gsap.to(left, {xPercent: -100, duration: 0});
 gsap.to(right, {xPercent: 100, duration: 0});
 
 window.addEventListener('resize', function(){
-	gsap.to(".left, .container, .right", 
+	gsap.to(".left, .pick, .right", 
 	{
 		width: vw(100), 
 		height: vh(100)
@@ -81,13 +81,13 @@ leftCard.addEventListener("click", () => {
 		scale: 0.7,
 		duration: 0.7,
 	})
-	gsap.to(".left, .container, .right", 
+	gsap.to(".left, .pick, .right", 
 	{
 		scale: 1, 
 		duration: 0.7,
 		x: '+=100%'
 	});
-	gsap.to(".container", 
+	gsap.to(".pick", 
 	{
 		scale: 0.7,
 		duration: 0.7,
@@ -112,13 +112,13 @@ rightCard.addEventListener("click", () => {
 		scale: 0.7,
 		duration: 0.7,
 	})
-	gsap.to(".left, .container, .right", 
+	gsap.to(".left, .pick, .right", 
 	{
 		scale: 1, 
 		duration: 0.7,
 		x: '-=100%'
 	});
-	gsap.to(".container", 
+	gsap.to(".pick", 
 	{
 		scale: 0.7,
 		duration: 0.7,
@@ -169,12 +169,12 @@ let returnRight = document.querySelector(".right2__return");
 
 
 returnLeft.addEventListener("click", () => {
-	gsap.from(".container", 
+	gsap.from(".pick", 
 	{
 		scale: 0.7,
 		duration: 0.7,
 	})
-	gsap.to(".left, .container, .right", 
+	gsap.to(".left, .pick, .right", 
 	{
 		scale: 1, 
 		duration: 0.7,
@@ -200,12 +200,12 @@ returnLeft.addEventListener("click", () => {
 })
 
 returnRight.addEventListener("click", () => {
-	gsap.from(".container", 
+	gsap.from(".pick", 
 	{
 		scale: 0.7,
 		duration: 0.7,
 	})
-	gsap.to(".left, .container, .right", 
+	gsap.to(".left, .pick, .right", 
 	{
 		scale: 1, 
 		duration: 0.7,
@@ -265,28 +265,28 @@ const qrCode = new QRCodeStyling({
 });
 
 
-let inactivityTime = function () {
-	let time;
-	window.onload = resetTimer;
-	document.onmousemove = resetTimer;
-	document.onkeypress = resetTimer;
-	function logout() {
-	  console.log("You are now logged out.")
+// let inactivityTime = function () {
+// 	let time;
+// 	window.onload = resetTimer;
+// 	document.onmousemove = resetTimer;
+// 	document.onkeypress = resetTimer;
+// 	function logout() {
+// 	  console.log("You are now logged out.")
 
-	  gsap.to(preview, {
-		duration: 1, 
-		scale: 1,
-		yPercent: 0,
-		opacity: 1
-	});
-	}
-	function resetTimer() {
-	  clearTimeout(time);
-	  time = setTimeout(logout, 30000)
-	}
-  };
-  inactivityTime();
-  console.log('Please wait...');
+// 	  gsap.to(preview, {
+// 		duration: 1, 
+// 		scale: 1,
+// 		yPercent: 0,
+// 		opacity: 1
+// 	});
+// 	}
+// 	function resetTimer() {
+// 	  clearTimeout(time);
+// 	  time = setTimeout(logout, 30000)
+// 	}
+//   };
+//   inactivityTime();
+//   console.log('Please wait...');
 
 
 
