@@ -26,13 +26,13 @@ const body = document.querySelector("body");
 const pick = document.querySelector(".pick");
 
 
-const leftCard = document.querySelector(".pick__buttons--left__button");
-const rightCard = document.querySelector(".pick__buttons--right__button");
-const left = document.querySelector(".left");
+const pickButtonRight = document.querySelector(".pick__buttons--right__button");
+const pickButtonLeft = document.querySelector(".pick__buttons--left__button");
+
+
+
 const right = document.querySelector(".right");
 
-
-let qrLeft = document.querySelector(".left2__qr");
 let qrRight = document.querySelector(".right2__qr");
 
 
@@ -40,15 +40,14 @@ let qrRight = document.querySelector(".right2__qr");
 
 const preview = document.querySelector(".preview");
 const previewButton = document.querySelector(".preview-button");
-const leftText = document.querySelector(".left-description__text");
+const rightText = document.querySelector(".right-description__text");
 
 
 
-gsap.to(left, {xPercent: -100, duration: 0});
 gsap.to(right, {xPercent: 100, duration: 0});
 
 window.addEventListener('resize', function(){
-	gsap.to(".left, .pick, .right", 
+	gsap.to(".pick, .right", 
 	{
 		width: vw(100), 
 		height: vh(100)
@@ -56,7 +55,7 @@ window.addEventListener('resize', function(){
 });
 
 // показать превью
-leftText.addEventListener("click", () => {
+rightText.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 0.7, 
 		scale: 1,
@@ -75,129 +74,73 @@ previewButton.addEventListener("click", () => {
 
 
 // левая карточка
-leftCard.addEventListener("click", () => {
-	gsap.from(".left", 
-	{
-		scale: 0.7,
-		duration: 0.7,
-	})
-	gsap.to(".left, .pick, .right", 
-	{
-		scale: 1, 
-		duration: 0.7,
-		x: '+=100%'
-	});
-	gsap.to(".pick", 
-	{
-		scale: 0.7,
-		duration: 0.7,
-	})
-	qrCode.append(qrLeft);
+// leftCard.addEventListener("click", () => {
+// 	gsap.from(".right", 
+// 	{
+// 		scale: 0.7,
+// 		duration: 0.7,
+// 	})
+// 	gsap.to(".left, .pick, .right", 
+// 	{
+// 		scale: 1, 
+// 		duration: 0.7,
+// 		x: '+=100%'
+// 	});
+// 	gsap.to(".pick", 
+// 	{
+// 		scale: 0.7,
+// 		duration: 0.7,
+// 	})
+// 	qrCode.append(qrLeft);
 
-	window.addEventListener('resize', function(){
-		let qrCanvasLeft = qrLeft.querySelector("canvas");
-		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
-	});
-	window.addEventListener('deviceorientation', function(){
-		let qrCanvasLeft = qrLeft.querySelector("canvas");
-		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
-	});
-})
+// 	window.addEventListener('resize', function(){
+// 		let qrCanvasLeft = qrLeft.querySelector("canvas");
+// 		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
+// 	});
+// 	window.addEventListener('deviceorientation', function(){
+// 		let qrCanvasLeft = qrLeft.querySelector("canvas");
+// 		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
+// 	});
+// })
 
 
 // правая карточка
-rightCard.addEventListener("click", () => {
-	gsap.from(".right", 
-	{
-		scale: 0.7,
-		duration: 0.7,
+
+document.querySelectorAll('.js-button').forEach(item => {
+	item.addEventListener("click", () => {
+		gsap.from(".right", 
+		{
+			scale: 0.7,
+			duration: 0.7,
+		})
+		gsap.to(".left, .pick, .right", 
+		{
+			scale: 1, 
+			duration: 0.7,
+			x: '-=100%'
+		});
+		gsap.to(".pick", 
+		{
+			scale: 0.7,
+			duration: 0.7,
+		})
+	
+		qrCode.append(qrRight);
+	
+		window.addEventListener('resize', function(){
+			let qrCanvasRight = qrRight.querySelector("canvas");
+			qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
+		});
+		window.addEventListener('deviceorientation', function(){
+			let qrCanvasRight = qrRight.querySelector("canvas");
+			qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
+		});
 	})
-	gsap.to(".left, .pick, .right", 
-	{
-		scale: 1, 
-		duration: 0.7,
-		x: '-=100%'
-	});
-	gsap.to(".pick", 
-	{
-		scale: 0.7,
-		duration: 0.7,
-	})
+  })
 
-	// настройки QR кода для правой карточки
-	const qrCode = new QRCodeStyling({
-		width: vw(23.4375),
-		height: vw(23.4375),
-		type: "canvas",
-		data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
 
-		dotsOptions: {
-			color: "#FFFFFF",
-			type: "rounded"
-		},
-		cornersSquareOptions: {
-			color: "#FFFFFF",
-			type: "extra-rounded"
-		},
-		cornersDotOptions: {
-			color: "#FFFFFF",
-			// type: "rounded"
-		},
-		backgroundOptions: {
-			color: "transparent",
-		},
-		imageOptions: {
-			crossOrigin: "anonymous",
-			margin: 0
-		}
-	});
-
-	qrCode.append(qrRight);
-
-	window.addEventListener('resize', function(){
-		let qrCanvasRight = qrRight.querySelector("canvas");
-		qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
-	});
-	window.addEventListener('deviceorientation', function(){
-		let qrCanvasRight = qrRight.querySelector("canvas");
-		qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
-	});
-})
-
-let returnLeft = document.querySelector(".left2__return");
 let returnRight = document.querySelector(".right2__return");
 
-
-returnLeft.addEventListener("click", () => {
-	gsap.from(".pick", 
-	{
-		scale: 0.7,
-		duration: 0.7,
-	})
-	gsap.to(".left, .pick, .right", 
-	{
-		scale: 1, 
-		duration: 0.7,
-		x: '-=100%'
-	});
-	gsap.to(".left", 
-	{
-		scale: 0.7,
-		duration: 0.7,
-	})
-
-
-	// сброс перемещений draggable
-	// без i будет работать только 1 раз
-	// setinterval для задержки
-	let i = 0;
-	setInterval(function(){ 
-		if (i < 1) {
-			gsap.set(".drag", {clearProps:"all"});
-			i += 1;
-		}
-	}, 500);
-})
 
 returnRight.addEventListener("click", () => {
 	gsap.from(".pick", 
@@ -217,10 +160,10 @@ returnRight.addEventListener("click", () => {
 		duration: 0.7,
 	})
 	
-	let qrCanvasRight = qrRight.querySelector("canvas");
-	setInterval(function(){ 
-		qrCanvasRight.remove()
-	}, 500);
+	// let qrCanvasRight = qrRight.querySelector("canvas");
+	// setInterval(function(){ 
+	// 	qrCanvasRight.remove()
+	// }, 500);
 
 
 	// сброс перемещений draggable
@@ -229,7 +172,7 @@ returnRight.addEventListener("click", () => {
 	let i = 0;
 	setInterval(function(){ 
 		if (i < 1) {
-			gsap.set(".dragRight", {clearProps:"all"});
+			gsap.set(".drag", {clearProps:"all"});
 			i += 1;
 		}
 	}, 500);
@@ -295,22 +238,13 @@ const qrCode = new QRCodeStyling({
 Draggable.create(".drag", {
 	type:"x,y", 
 	edgeResistance:0.7, 
-	bounds:".left-description", 
-	inertia:true,
-	throwProps:true,
-	// onDrag:adjustOpacity,
-	// onThrowUpdate:adjustOpacity
-});
-
-Draggable.create(".dragRight", {
-	type:"x,y", 
-	edgeResistance:0.7, 
 	bounds:".right-description", 
 	inertia:true,
 	throwProps:true,
 	// onDrag:adjustOpacity,
 	// onThrowUpdate:adjustOpacity
 });
+
 
 // function adjustOpacity() {
 // var distanceFromMaxX = this.x - this.maxX,
