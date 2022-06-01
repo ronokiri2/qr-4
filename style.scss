@@ -80,6 +80,7 @@ body {
 			object-fit: cover;
 			border-radius: 0.78125vw;
 			z-index: 1;
+			filter: brightness(0.8);
 		}
 		&--imgB{
 			position: absolute;
@@ -114,6 +115,7 @@ body {
 			object-fit: cover;
 			border-radius: 0.78125vw;
 			z-index: 1;
+			filter: brightness(0.8);
 		}
 
 		&--imgSmall1 {
@@ -230,6 +232,7 @@ body {
 				&--ruble {
 					font-size: 2.03125vw; //26px
 					line-height: 2.03125vw;
+					margin-bottom: 1vw;
 				}
 			}
 		}
@@ -312,6 +315,7 @@ body {
 				&--ruble {
 					font-size: 2.03125vw; //26px
 					line-height: 2.03125vw;
+					margin-bottom: 1vw;
 				}
 			}
 		}
@@ -376,7 +380,7 @@ body {
 			background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #C4C4C4;
 			color: white;
 			font-size: 1.40625vw; //18px
-			font-weight: 400;
+			font-weight: 700;
 			margin-top: 1.09375vw; //14px
 
 			span {

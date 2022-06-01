@@ -100,6 +100,8 @@ body {
      object-fit: cover;
   border-radius: 0.78125vw;
   z-index: 1;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 .pick__imgs--imgB {
   position: absolute;
@@ -136,6 +138,8 @@ body {
      object-fit: cover;
   border-radius: 0.78125vw;
   z-index: 1;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 .pick__imgs--imgSmall1 {
   width: 6.28828125vw;
@@ -279,6 +283,7 @@ body {
 .pick__buttons--left__price--ruble {
   font-size: 2.03125vw;
   line-height: 2.03125vw;
+  margin-bottom: 1vw;
 }
 .pick__buttons--img {
   position: absolute;
@@ -379,6 +384,7 @@ body {
 .pick__buttons--right__price--ruble {
   font-size: 2.03125vw;
   line-height: 2.03125vw;
+  margin-bottom: 1vw;
 }
 
 .right {
@@ -451,7 +457,7 @@ body {
   background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #C4C4C4;
   color: white;
   font-size: 1.40625vw;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 1.09375vw;
 }
 .right-description__months span {
