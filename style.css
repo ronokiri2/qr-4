@@ -102,6 +102,11 @@ body {
   z-index: 1;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgB {
   position: absolute;
@@ -114,6 +119,11 @@ body {
      object-fit: cover;
   border-radius: 0.78125vw;
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgD {
   position: absolute;
@@ -126,6 +136,11 @@ body {
      object-fit: cover;
   border-radius: 0.78125vw;
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgE {
   position: absolute;
@@ -140,6 +155,11 @@ body {
   z-index: 1;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgSmall1 {
   width: 6.28828125vw;
@@ -155,6 +175,11 @@ body {
      object-fit: contain;
   -webkit-filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
           filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgSmall2 {
   width: 6.28828125vw;
@@ -170,6 +195,11 @@ body {
      object-fit: contain;
   -webkit-filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
           filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgSmall3 {
   width: 6.28828125vw;
@@ -185,6 +215,11 @@ body {
      object-fit: contain;
   -webkit-filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
           filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__imgs--imgSmall4 {
   width: 6.28828125vw;
@@ -200,6 +235,11 @@ body {
      object-fit: contain;
   -webkit-filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
           filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__buttons {
   width: 54.6875vw;
@@ -306,6 +346,11 @@ body {
   border-radius: 1.4vw;
   background: -webkit-gradient(linear, left top, right top, from(#C32F77), to(#CF2E47)), #D9D9D9;
   background: linear-gradient(90deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .pick__buttons--img__white {
   position: absolute;

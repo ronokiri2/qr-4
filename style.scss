@@ -81,6 +81,8 @@ body {
 			border-radius: 0.78125vw;
 			z-index: 1;
 			filter: brightness(0.8);
+			user-select: none;
+			pointer-events: none;
 		}
 		&--imgB{
 			position: absolute;
@@ -92,6 +94,8 @@ body {
 			object-fit: cover;
 			border-radius: 0.78125vw;
 			z-index: 2;
+			user-select: none;
+			pointer-events: none;
 		}
 
 		&--imgD {
@@ -104,6 +108,8 @@ body {
 			object-fit: cover;
 			border-radius: 0.78125vw;
 			z-index: 2;
+			user-select: none;
+			pointer-events: none;
 		}
 		&--imgE {
 			position: absolute;
@@ -116,6 +122,8 @@ body {
 			border-radius: 0.78125vw;
 			z-index: 1;
 			filter: brightness(0.8);
+			user-select: none;
+			pointer-events: none;
 		}
 
 		&--imgSmall1 {
@@ -130,6 +138,8 @@ body {
 			z-index: 6;
 			object-fit: contain;
 			filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+			user-select: none;
+			pointer-events: none;
 		}
 		&--imgSmall2 {
 			width: 6.28828125vw;
@@ -143,6 +153,8 @@ body {
 			z-index: 6;
 			object-fit: contain;
 			filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+			user-select: none;
+			pointer-events: none;
 		}
 		&--imgSmall3 {
 			width: 6.28828125vw;
@@ -156,6 +168,8 @@ body {
 			z-index: 6;
 			object-fit: contain;
 			filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+			user-select: none;
+			pointer-events: none;
 		}
 		&--imgSmall4 {
 			width: 6.28828125vw;
@@ -169,6 +183,8 @@ body {
 			z-index: 6;
 			object-fit: contain;
 			filter: drop-shadow(5px 5px 10px rgba(20, 9, 74, 0.1));
+			user-select: none;
+			pointer-events: none;
 		}
 	}
 
@@ -249,6 +265,8 @@ body {
 			align-items: center;
 			border-radius: 1.4vw;
 			background: linear-gradient(90deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
+			user-select: none;
+			pointer-events: none;
 			
 			&__white {
 				position: absolute;
