@@ -26,9 +26,6 @@ const body = document.querySelector("body");
 const pick = document.querySelector(".pick");
 
 
-const pickButtonRight = document.querySelector(".pick__buttons--right__button");
-const pickButtonLeft = document.querySelector(".pick__buttons--left__button");
-
 
 
 const right = document.querySelector(".right");
@@ -73,71 +70,85 @@ previewButton.addEventListener("click", () => {
 })
 
 
-// левая карточка
-// leftCard.addEventListener("click", () => {
-// 	gsap.from(".right", 
-// 	{
-// 		scale: 0.7,
-// 		duration: 0.7,
-// 	})
-// 	gsap.to(".left, .pick, .right", 
-// 	{
-// 		scale: 1, 
-// 		duration: 0.7,
-// 		x: '+=100%'
-// 	});
-// 	gsap.to(".pick", 
-// 	{
-// 		scale: 0.7,
-// 		duration: 0.7,
-// 	})
-// 	qrCode.append(qrLeft);
 
-// 	window.addEventListener('resize', function(){
-// 		let qrCanvasLeft = qrLeft.querySelector("canvas");
-// 		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
-// 	});
-// 	window.addEventListener('deviceorientation', function(){
-// 		let qrCanvasLeft = qrLeft.querySelector("canvas");
-// 		qrCanvasLeft.setAttribute("style",`width:${vw(23.4375)}px`);
-// 	});
-// })
 
+// настройки QR кода
+const qrCode = new QRCodeStyling({
+	width: vw(23.4375),
+	height: vw(23.4375),
+	type: "canvas",
+	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
+
+	dotsOptions: {
+		color: "#C32F77",
+		type: "rounded"
+	},
+	cornersSquareOptions: {
+		color: "#C32F77",
+		type: "extra-rounded"
+	},
+	cornersDotOptions: {
+		color: "#C32F77",
+		// type: "rounded"
+	},
+	backgroundOptions: {
+		color: "transparent",
+	},
+	imageOptions: {
+		crossOrigin: "anonymous",
+		margin: 0
+	}
+});
 
 // правая карточка
+const pickButtonRight = document.querySelector(".pick__buttons--right__button");
+const pickButtonLeft = document.querySelector(".pick__buttons--left__button");
+const monthsButton = document.querySelector(".right-description__months");
 
-document.querySelectorAll('.js-button').forEach(item => {
-	item.addEventListener("click", () => {
-		gsap.from(".right", 
-		{
-			scale: 0.7,
-			duration: 0.7,
-		})
-		gsap.to(".left, .pick, .right", 
-		{
-			scale: 1, 
-			duration: 0.7,
-			x: '-=100%'
-		});
-		gsap.to(".pick", 
-		{
-			scale: 0.7,
-			duration: 0.7,
-		})
-	
-		qrCode.append(qrRight);
-	
-		window.addEventListener('resize', function(){
-			let qrCanvasRight = qrRight.querySelector("canvas");
-			qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
-		});
-		window.addEventListener('deviceorientation', function(){
-			let qrCanvasRight = qrRight.querySelector("canvas");
-			qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
-		});
+
+pickButtonLeft.addEventListener("click", moveLeft)
+pickButtonRight.addEventListener("click", moveLeft)
+pickButtonLeft.addEventListener("click", addQr)
+pickButtonRight.addEventListener("click", addQr)
+pickButtonLeft.addEventListener("click", button1Month)
+pickButtonRight.addEventListener("click", button3Months)
+
+function moveLeft(){
+	gsap.from(".right", 
+	{
+		scale: 0.7,
+		duration: 0.7,
 	})
-  })
+	gsap.to(".pick, .right", 
+	{
+		scale: 1, 
+		duration: 0.7,
+		x: '-=100%'
+	});
+	gsap.to(".pick", 
+	{
+		scale: 0.7,
+		duration: 0.7,
+	})
+};
 
+function addQr(){
+	qrCode.append(qrRight);
+};
+function button1Month(){
+	monthsButton.innerText = '1 МЕСЯЦ ПОДПИСКИ';
+};
+function button3Months(){
+	monthsButton.innerText = '3 МЕСЯЦА ПОДПИСКИ';
+};
+
+window.addEventListener('resize', resizeQr);
+window.addEventListener('deviceorientation', resizeQr);
+
+function resizeQr(){
+	let qrCanvasRight = qrRight.querySelector("canvas");
+	qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
+};
 
 let returnRight = document.querySelector(".right2__return");
 
@@ -148,7 +159,7 @@ returnRight.addEventListener("click", () => {
 		scale: 0.7,
 		duration: 0.7,
 	})
-	gsap.to(".left, .pick, .right", 
+	gsap.to(".pick, .right", 
 	{
 		scale: 1, 
 		duration: 0.7,
@@ -179,33 +190,6 @@ returnRight.addEventListener("click", () => {
 });
 
 
-// настройки QR кода
-const qrCode = new QRCodeStyling({
-	width: vw(23.4375),
-	height: vw(23.4375),
-	type: "canvas",
-	data: `https://kion.ru/test?utm_source=SALON&utm_medium=SALON-${input}`,
-
-	dotsOptions: {
-		color: "#C32F77",
-		type: "rounded"
-	},
-	cornersSquareOptions: {
-		color: "#C32F77",
-		type: "extra-rounded"
-	},
-	cornersDotOptions: {
-		color: "#C32F77",
-		// type: "rounded"
-	},
-	backgroundOptions: {
-		color: "transparent",
-	},
-	imageOptions: {
-		crossOrigin: "anonymous",
-		margin: 0
-	}
-});
 
 
 // let inactivityTime = function () {

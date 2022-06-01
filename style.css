@@ -299,7 +299,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 1.4vw;
-  background: linear-gradient(88.48deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
+  background: -webkit-gradient(linear, left top, right top, from(#C32F77), to(#CF2E47)), #D9D9D9;
+  background: linear-gradient(90deg, #C32F77 0%, #CF2E47 100%), #D9D9D9;
 }
 .pick__buttons--img__white {
   position: absolute;
@@ -439,7 +440,7 @@ body {
   height: 5.859375vw;
   text-align: center;
 }
-.right-description__30days {
+.right-description__months {
   width: 19.53125vw;
   height: 3.125vw;
   line-height: 3.125vw;
@@ -453,7 +454,7 @@ body {
   font-weight: 400;
   margin-top: 1.09375vw;
 }
-.right-description__30days span {
+.right-description__months span {
   font-size: 1.09375vw;
 }
 .right-description__draggable {
