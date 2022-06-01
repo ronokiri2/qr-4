@@ -8,8 +8,8 @@ let vw = (coef) => {
 let vh = (coef) => window.innerHeight * (coef/100);
 
 
-// let input = prompt("Введите номер салона сотовой связи")
-let input = '6';
+let input = prompt("Введите номер салона сотовой связи")
+// let input = '6';
 console.log(input);
 
 // наверное, не работает
@@ -192,28 +192,28 @@ returnRight.addEventListener("click", () => {
 
 
 
-// let inactivityTime = function () {
-// 	let time;
-// 	window.onload = resetTimer;
-// 	document.onmousemove = resetTimer;
-// 	document.onkeypress = resetTimer;
-// 	function logout() {
-// 	  console.log("You are now logged out.")
+let inactivityTime = function () {
+	let time;
+	window.onload = resetTimer;
+	document.onmousemove = resetTimer;
+	document.onkeypress = resetTimer;
+	function logout() {
+	  console.log("You are now logged out.")
 
-// 	  gsap.to(preview, {
-// 		duration: 1, 
-// 		scale: 1,
-// 		yPercent: 0,
-// 		opacity: 1
-// 	});
-// 	}
-// 	function resetTimer() {
-// 	  clearTimeout(time);
-// 	  time = setTimeout(logout, 30000)
-// 	}
-//   };
-//   inactivityTime();
-//   console.log('Please wait...');
+	  gsap.to(preview, {
+		duration: 1, 
+		scale: 1,
+		yPercent: 0,
+		opacity: 1
+	});
+	}
+	function resetTimer() {
+	  clearTimeout(time);
+	  time = setTimeout(logout, 30000)
+	}
+  };
+  inactivityTime();
+  console.log('Please wait...');
 
 
 
