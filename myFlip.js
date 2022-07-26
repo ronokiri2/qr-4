@@ -68,7 +68,12 @@ previewButton.addEventListener("click", () => {
 		opacity: 1
 	});
 })
-
+gsap.set(preview, {
+	duration: 0, 
+	scale: 0.7,
+	yPercent: 100,
+	opacity: 1
+});
 
 
 
