@@ -1,18 +1,23 @@
 'use strict';
+// основной код для работы кнопок с анимацией
 gsap.registerPlugin(Draggable, InertiaPlugin);
 
-// также перемещать и видео превью
+
+// для того чтобы задать размеры
 let vw = (coef) => {
 	return window.innerWidth * (coef/100);
 }
 let vh = (coef) => window.innerHeight * (coef/100);
 
 
+// Для аналитики предложили изменять qr код, добавляя в utm метку номер салона
+// QR КОД зависит от введенного номера салона сотовой связи
 let input = prompt("Введите номер салона сотовой связи")
-// let input = '6';
 console.log(input);
 
-// наверное, не работает
+
+// Наверное, не работает. 
+// Добавлял этот код чтобы при изменении размера экрана или повороте планшета изменялись vh vw
 window.addEventListener('resize', function(){
 	vw = (coef) => window.innerWidth * (coef/100);
 	vh = (coef) => window.innerHeight * (coef/100);
@@ -22,19 +27,13 @@ window.addEventListener('deviceorientation', function(){
 	vh = (coef) => window.innerHeight * (coef/100);
 });
 
+
+
+
 const body = document.querySelector("body");
 const pick = document.querySelector(".pick");
-
-
-
-
 const right = document.querySelector(".right");
-
 let qrRight = document.querySelector(".right2__qr");
-
-
-
-
 const preview = document.querySelector(".preview");
 const previewButton = document.querySelector(".preview-button");
 const rightText = document.querySelector(".right-description__text");
@@ -51,7 +50,8 @@ window.addEventListener('resize', function(){
 	});
 });
 
-// показать превью
+// кнопка чтобы тестировать превью 
+// кнопка показает превью с видеорядом
 rightText.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 0.7, 
@@ -60,6 +60,8 @@ rightText.addEventListener("click", () => {
 		opacity: 1
 	});
 })
+
+// скрыть превью с видеорядом
 previewButton.addEventListener("click", () => {
 	gsap.to(preview, {
 		duration: 0.7, 
@@ -68,6 +70,8 @@ previewButton.addEventListener("click", () => {
 		opacity: 1
 	});
 })
+
+// чтобы при первом открытии не отображалось превью с видеорядом
 gsap.set(preview, {
 	duration: 0, 
 	scale: 0.7,
@@ -140,6 +144,8 @@ function moveLeft(){
 function addQr(){
 	qrCode.append(qrRight);
 };
+
+// функции для изменения текста
 function button1Month(){
 	monthsButton.innerText = '1 МЕСЯЦ ПОДПИСКИ';
 };
@@ -147,6 +153,8 @@ function button3Months(){
 	monthsButton.innerText = '3 МЕСЯЦА ПОДПИСКИ';
 };
 
+
+// функция чтобы qr код изменял свой размер при смене разрешения или ориентации экрана
 window.addEventListener('resize', resizeQr);
 window.addEventListener('deviceorientation', resizeQr);
 
@@ -155,8 +163,12 @@ function resizeQr(){
 	qrCanvasRight.setAttribute("style",`width:${vw(23.4375)}px`);
 };
 
-let returnRight = document.querySelector(".right2__return");
 
+
+
+// кнопка вернуться назад
+// также сбрасывает передвинутые draggable элементы
+let returnRight = document.querySelector(".right2__return");
 
 returnRight.addEventListener("click", () => {
 	gsap.from(".pick", 
@@ -196,7 +208,7 @@ returnRight.addEventListener("click", () => {
 
 
 
-
+// функция отображения превью с видеорядом по таймеру
 let inactivityTime = function () {
 	let time;
 	window.onload = resetTimer;
@@ -251,7 +263,7 @@ Draggable.create(".drag", {
 
 
 
-// preview 
+// Превью с видеорядом
 var slideDelay = 1.5;
 var slideDuration = 1;
 var slides = document.querySelectorAll(".slide");
